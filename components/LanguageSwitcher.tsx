@@ -21,27 +21,27 @@ export default function LanguageSwitcher() {
 		<div className="inline-flex items-center gap-1">
 			<Link
 				href={replaceLocaleInPath(pathname, "en")}
-				className="inline-flex items-center justify-center w-6 h-6 rounded-full border border-foreground/20 hover:bg-foreground/5"
+				className="relative w-6 h-6 rounded-full overflow-hidden border border-foreground/20 hover:bg-foreground/5"
 				aria-label="English"
 				prefetch={false}
 			>
-				<Image src="/flags/gb.svg" alt="English" width={16} height={16} className="rounded-full" />
+				<Image src="/flags/gb.svg" alt="English" fill sizes="24px" className="object-cover" />
 			</Link>
 			<Link
 				href={replaceLocaleInPath(pathname, "fa")}
-				className="inline-flex items-center justify-center w-6 h-6 rounded-full border border-foreground/20 hover:bg-foreground/5"
+				className="relative w-6 h-6 rounded-full overflow-hidden border border-foreground/20 hover:bg-foreground/5"
 				aria-label="فارسی"
 				prefetch={false}
 			>
-				<Image src="/flags/ir.svg" alt="فارسی" width={16} height={16} className="rounded-full" />
+				<Image src="/flags/ir.svg" alt="فارسی" fill sizes="24px" className="object-cover" />
 			</Link>
 			<Link
 				href={replaceLocaleInPath(pathname, "no")}
-				className="inline-flex items-center justify-center w-6 h-6 rounded-full border border-foreground/20 hover:bg-foreground/5"
+				className="relative w-6 h-6 rounded-full overflow-hidden border border-foreground/20 hover:bg-foreground/5"
 				aria-label="Norsk"
 				prefetch={false}
 			>
-				<Image src="/flags/no.svg" alt="Norsk" width={16} height={16} className="rounded-full" />
+				<Image src="/flags/no.svg" alt="Norsk" fill sizes="24px" className="object-cover" />
 			</Link>
 		</div>
 	);

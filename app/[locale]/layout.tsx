@@ -8,6 +8,7 @@ import RightBackdropSlider from "@/components/RightBackdropSlider";
 import PageFade from "@/components/PageFade";
 import ThemeToggle from "@/components/ThemeToggle";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import DocumentAttributes from "@/components/DocumentAttributes";
 import "./globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -26,6 +27,7 @@ export default async function LocaleLayout({ children }: { children: React.React
     const messages = await getMessages();
     return (
         <NextIntlClientProvider messages={messages} locale={locale}>
+            <DocumentAttributes initialLocale={locale} />
             <div className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased h-dvh overflow-hidden md:grid md:grid-cols-[260px_1fr]`}>
                 <Sidebar />
 

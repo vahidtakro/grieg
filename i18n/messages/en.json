@@ -1,0 +1,28 @@
+{
+	"nav": {
+		"works": "Works",
+		"biography": "Biography",
+		"listen": "Listen",
+		"blog": "Blog"
+	},
+	"site": {
+		"title": "Edvard Grieg",
+		"tagline": "Composer & Pianist"
+	},
+	"home": {
+		"explore": "Explore works",
+		"listen": "Listen"
+	},
+	"blog": {
+		"title": "Blog"
+	},
+	"biography": {
+		"title": "Biography"
+	},
+	"notFound": {
+		"title": "Page not found",
+		"back": "Back home"
+	}
+}
+
+

@@ -1,0 +1,28 @@
+{
+	"nav": {
+		"works": "Verker",
+		"biography": "Biografi",
+		"listen": "Lytt",
+		"blog": "Blogg"
+	},
+	"site": {
+		"title": "Edvard Grieg",
+		"tagline": "Komponist og pianist"
+	},
+	"home": {
+		"explore": "Utforsk verker",
+		"listen": "Lytt"
+	},
+	"blog": {
+		"title": "Blogg"
+	},
+	"biography": {
+		"title": "Biografi"
+	},
+	"notFound": {
+		"title": "Siden ble ikke funnet",
+		"back": "Tilbake til forsiden"
+	}
+}
+
+

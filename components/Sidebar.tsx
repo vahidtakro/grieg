@@ -3,6 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "@/components/ThemeToggle";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { locales } from "@/i18n/config";
+import { useTranslations } from "next-intl";
 
 function NavLink({ href, label }: { href: string; label: string }) {
   const pathname = usePathname();
@@ -23,6 +26,10 @@ function NavLink({ href, label }: { href: string; label: string }) {
 }
 
 export default function Sidebar() {
+  const t = useTranslations();
+  const pathname = usePathname() || "/en";
+  const currentLocale = (pathname.split("/").filter(Boolean)[0] ?? "en");
+  const locale = locales.includes(currentLocale as any) ? currentLocale : "en";
   return (
     <aside className="hidden md:flex sticky top-0 h-dvh flex-col w-[260px] border-r border-foreground/10 bg-gradient-to-b from-background to-background/60">
       <div className="relative px-5 py-6 border-b border-foreground/10 overflow-hidden">
@@ -30,20 +37,21 @@ export default function Sidebar() {
         <div className="absolute inset-0 overlay-side" />
         <div className="absolute right-0 top-0 h-full w-[6px] bg-[--accent] opacity-60" />
         <div className="relative text-xl font-semibold tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
-          <Link href="/">Edvard Grieg</Link>
+          <Link href={`/${locale}`}>Edvard Grieg</Link>
         </div>
-        <div className="relative mt-2 text-xs text-foreground/70">Composer & Pianist</div>
+        <div className="relative mt-2 text-xs text-foreground/70">{t("site.tagline")}</div>
       </div>
       <div className="relative flex-1">
         <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "url(/notes-sheet.svg)", backgroundRepeat: "repeat", backgroundSize: "360px 270px" }} />
         <nav className="relative z-10 px-3 py-4 gap-1 flex flex-col">
-          <NavLink href="/works" label="Works" />
-          <NavLink href="/biography" label="Biography" />
-          <NavLink href="/listen" label="Listen" />
-          <NavLink href="/blog" label="Blog" />
+          <NavLink href={`/${locale}/works`} label={t("nav.works")} />
+          <NavLink href={`/${locale}/biography`} label={t("nav.biography")} />
+          <NavLink href={`/${locale}/listen`} label={t("nav.listen")} />
+          <NavLink href={`/${locale}/blog`} label={t("nav.blog")} />
         </nav>
       </div>
-      <div className="px-5 py-4 border-t border-foreground/10">
+      <div className="px-5 py-4 border-t border-foreground/10 flex items-center gap-2">
+        <LanguageSwitcher />
         <ThemeToggle />
       </div>
     </aside>

@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { locales } from "@/i18n/config";
+import Image from "next/image";
 
 function replaceLocaleInPath(pathname: string, nextLocale: string): string {
 	const parts = pathname.split("/").filter(Boolean);
@@ -24,7 +25,7 @@ export default function LanguageSwitcher() {
 				aria-label="English"
 				prefetch={false}
 			>
-				<span className="fi fi-gb fis rounded-full w-4 h-4" />
+				<Image src="/flags/gb.svg" alt="English" width={16} height={16} className="rounded-full" />
 			</Link>
 			<Link
 				href={replaceLocaleInPath(pathname, "fa")}
@@ -32,7 +33,7 @@ export default function LanguageSwitcher() {
 				aria-label="فارسی"
 				prefetch={false}
 			>
-				<span className="fi fi-ir fis rounded-full w-4 h-4" />
+				<Image src="/flags/ir.svg" alt="فارسی" width={16} height={16} className="rounded-full" />
 			</Link>
 			<Link
 				href={replaceLocaleInPath(pathname, "no")}
@@ -40,7 +41,7 @@ export default function LanguageSwitcher() {
 				aria-label="Norsk"
 				prefetch={false}
 			>
-				<span className="fi fi-no fis rounded-full w-4 h-4" />
+				<Image src="/flags/no.svg" alt="Norsk" width={16} height={16} className="rounded-full" />
 			</Link>
 		</div>
 	);

@@ -4,9 +4,9 @@ import { getTranslations } from "next-intl/server";
 
 export const dynamic = "force-static";
 
-export default async function BlogIndexPage({ params }: { params: { locale: string } }) {
+export default async function BlogIndexPage({ params }: { params: Promise<{ locale: string }> }) {
     const t = await getTranslations();
-    const { locale } = params;
+    const { locale } = await params;
 	const posts = await getAllMarkdown(`blog/${locale}`);
 	return (
 		<section className="container-padded py-14 md:py-20">

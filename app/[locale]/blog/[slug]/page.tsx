@@ -1,16 +1,20 @@
 import { getAllMarkdown, getMarkdownBySlug } from "@/lib/markdown";
 import Link from "next/link";
+import { locales } from "@/i18n/config";
 
 export const dynamic = "force-static";
 
-export async function generateStaticParams({ params }: { params: { locale: string } }) {
-	const { locale } = params;
-	const posts = await getAllMarkdown(`blog/${locale}`);
-	return posts.map((p) => ({ slug: p.slug }));
+export async function generateStaticParams() {
+	const slugSet = new Set<string>();
+	for (const loc of locales) {
+		const posts = await getAllMarkdown(`blog/${loc}`);
+		for (const p of posts) slugSet.add(p.slug);
+	}
+	return Array.from(slugSet).map((slug) => ({ slug }));
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string; locale: string } }) {
-	const { locale, slug } = params;
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string; locale: string }> }) {
+	const { locale, slug } = await params;
 	const post = await getMarkdownBySlug(`blog/${locale}`, slug);
 	if (!post) {
 		return (

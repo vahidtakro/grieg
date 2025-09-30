@@ -1,8 +1,0 @@
-/* Minimal subset: background images point to /vendor/flag-icons/flags */
-.fi{background-position:50%;background-repeat:no-repeat;position:relative;display:inline-block;line-height:1}
-.fi:before{content:"\00a0"}
-.fis{width:1em;height:1em;background-size:cover}
-.fi-gb{background-image:url("/vendor/flag-icons/flags/gb.svg")}
-.fi-ir{background-image:url("/vendor/flag-icons/flags/ir.svg")}
-.fi-no{background-image:url("/vendor/flag-icons/flags/no.svg")}
-

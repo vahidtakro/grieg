@@ -10,8 +10,6 @@
 	font-display: swap;
 }
 
-/* Local copy of flag icons (subset) */
-@import url("/vendor/flag-icons/css/flag-icons.min.css");
 @font-face {
 	font-family: "Sahel";
 	src: url("/fonts/sahel/Sahel-SemiBold-FD.woff2") format("woff2"),

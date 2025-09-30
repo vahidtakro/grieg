@@ -13,7 +13,10 @@
 	"home": {
 		"explore": "Utforsk verker",
     "listen": "Lytt",
-    "lead": "Norsk komponist og pianist (1843–1907). Feiret for sin lyrikk og nasjonalromantiske stil. Utforsk utvalgte verker, en kort biografi og innspillinger."
+	    "lead": "Norsk komponist og pianist (1843–1907). Feiret for sin lyrikk og nasjonalromantiske stil. Utforsk utvalgte verker, en kort biografi og innspillinger.",
+		"latestWorks": "Utvalgte verker",
+		"latestPosts": "Nylige innlegg",
+		"viewAll": "Se alle"
 	},
 	"blog": {
 		"title": "Blogg",
@@ -22,7 +25,7 @@
 		"notFoundMessage": "Innlegget ble ikke funnet. Gå tilbake til"
 	},
 	"works": {
-		"intro": "Et lite utvalg av bemerkelsesverdige verk. Dette er en start—du kan utvide med full katalog senere.",
+		"intro": "Et lite utvalg av bemerkelsesverdige verk.",
 		"detailPlaceholder": "Dette er en startmal. Bytt ut denne teksten med programnoter, satser, besetning og medier."
 	},
 	"listen": {

@@ -13,7 +13,10 @@
 	"home": {
 		"explore": "Explore works",
     "listen": "Listen",
-    "lead": "Norwegian composer and pianist (1843–1907). Celebrated for his lyricism and national romantic style. Explore selected works, a short biography, and recordings."
+	    "lead": "Norwegian composer and pianist (1843–1907). Celebrated for his lyricism and national romantic style. Explore selected works, a short biography, and recordings.",
+		"latestWorks": "Selected works",
+		"latestPosts": "Recent posts",
+		"viewAll": "View all"
 	},
 	"blog": {
 		"title": "Blog",
@@ -22,7 +25,7 @@
 		"notFoundMessage": "The requested post was not found. Go back to the"
 	},
 	"works": {
-		"intro": "A small selection of notable pieces. This is a starter—you can expand with full catalog data later.",
+		"intro": "A small selection of notable pieces.",
 		"detailPlaceholder": "This is a starter template. Replace this text with program notes, movements, instrumentation, and media embeds."
 	},
 	"listen": {

@@ -127,6 +127,30 @@ html[dir="rtl"] .right-slider img {
 .prose p { margin-top: 0.75rem; margin-bottom: 0.75rem; }
 .prose a { color: inherit; text-decoration: underline; text-underline-offset: 4px; }
 .prose h2, .prose h3, .prose h4 { font-family: var(--font-display); margin-top: 1.25em; margin-bottom: 0.5em; }
+/* Explicit heading sizes & weights so markdown shows as headings */
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  line-height: 1.2;
+}
+.prose h1 { font-size: clamp(1.875rem, 2.2rem + 0.5vw, 2.5rem); font-weight: 700; }
+.prose h2 { font-size: clamp(1.5rem, 1.7rem + 0.4vw, 2rem); font-weight: 700; }
+.prose h3 { font-size: clamp(1.25rem, 1.35rem + 0.3vw, 1.5rem); font-weight: 600; }
+.prose h4 { font-size: 1.125rem; font-weight: 600; }
+.prose h5 { font-size: 1rem; font-weight: 600; }
+.prose h6 { font-size: 0.95rem; font-weight: 600; opacity: 0.9; }
+/* Force Sahel for headings in Persian */
+html[data-locale="fa"] .prose h1,
+html[data-locale="fa"] .prose h2,
+html[data-locale="fa"] .prose h3,
+html[data-locale="fa"] .prose h4,
+html[data-locale="fa"] .prose h5,
+html[data-locale="fa"] .prose h6 {
+  font-family: "Sahel FD", var(--font-display);
+}
 .prose ul, .prose ol { padding-left: 1.25rem; margin: 0.75rem 0; }
 .prose li { margin: 0.25rem 0; }
 .prose blockquote { border-left: 3px solid var(--foreground); padding-left: 0.75rem; margin: 1rem 0; opacity: 0.8; }

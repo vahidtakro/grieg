@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getLocale } from "next-intl/server";
+import { getMessages, getLocale, getTranslations } from "next-intl/server";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import Link from "next/link";
 import Sidebar from "@/components/Sidebar";
@@ -9,22 +9,31 @@ import PageFade from "@/components/PageFade";
 import ThemeToggle from "@/components/ThemeToggle";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import DocumentAttributes from "@/components/DocumentAttributes";
+import MobileMenu from "@/components/MobileMenu";
 import "./globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 const playfair = Playfair_Display({ variable: "--font-display", subsets: ["latin"] });
 
-export const metadata: Metadata = {
-    title: "Edvard Grieg — Composer",
-    description:
-        "A minimal website dedicated to the life and works of Norwegian composer Edvard Grieg.",
-    icons: { icon: "/favicon.svg" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+    const t = await getTranslations();
+    const title = t("site.title");
+    const description = t("home.lead");
+    return {
+        title: {
+            default: title,
+            template: `%s — ${title}`,
+        },
+        description,
+        icons: { icon: "/favicon.svg" },
+    };
+}
 
 export default async function LocaleLayout({ children }: { children: React.ReactNode }) {
     const locale = await getLocale();
     const messages = await getMessages();
+    const t = await getTranslations();
     return (
         <NextIntlClientProvider messages={messages} locale={locale}>
             <DocumentAttributes initialLocale={locale} />
@@ -33,10 +42,11 @@ export default async function LocaleLayout({ children }: { children: React.React
 
                 <div className="relative h-dvh flex flex-col overflow-y-auto">
                     <div className="md:hidden sticky top-0 z-20 flex items-center justify-between px-5 py-3 border-b border-foreground/10 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-                        <Link href={`/${locale}`} className="text-lg font-semibold" style={{ fontFamily: "var(--font-display)" }}>Edvard Grieg</Link>
+                        <Link href={`/${locale}`} className="text-lg font-semibold" style={{ fontFamily: "var(--font-display)" }}>{t("site.title")}</Link>
                         <div className="flex items-center gap-2">
                             <LanguageSwitcher />
                             <ThemeToggle />
+                            <MobileMenu />
                         </div>
                     </div>
 
@@ -50,7 +60,7 @@ export default async function LocaleLayout({ children }: { children: React.React
                             <PageFade>{children}</PageFade>
                         </main>
                         <footer className="px-6 md:px-10 py-8 text-xs text-foreground/70 border-t border-foreground/10">
-                            © {new Date().getFullYear()} Edvard Grieg. Unofficial site.
+                            © {new Date().getFullYear()} {t("site.title")}. {t("site.footerNote")}
                         </footer>
                     </div>
                 </div>

@@ -2,11 +2,9 @@
 
 import { useEffect, useState } from "react";
 
+// Return a stable SSR value to avoid hydration mismatches.
 function getInitialTheme(): "light" | "dark" {
-  if (typeof window === "undefined") return "light";
-  const saved = window.localStorage.getItem("theme-preference");
-  if (saved === "light" || saved === "dark") return saved;
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  return "light";
 }
 
 export default function ThemeToggle() {
@@ -21,6 +19,19 @@ export default function ThemeToggle() {
 
   useEffect(() => {
     setMounted(true);
+    // After mount, resolve the real preferred theme (storage or media) and apply it.
+    try {
+      const saved = window.localStorage.getItem("theme-preference");
+      if (saved === "light" || saved === "dark") {
+        if (saved !== theme) setTheme(saved);
+        return;
+      }
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const resolved = prefersDark ? "dark" : "light";
+      if (resolved !== theme) setTheme(resolved);
+    } catch (_) {
+      // ignore
+    }
   }, []);
 
   const isDark = theme === "dark";

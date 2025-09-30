@@ -9,7 +9,8 @@ type DocumentAttributesProps = {
 
 export default function DocumentAttributes({ initialLocale }: DocumentAttributesProps) {
   const runtimeLocale = useLocale();
-  const locale = initialLocale || runtimeLocale;
+  // Always prefer the runtime locale so client-side navigations update dir/lang
+  const locale = runtimeLocale || initialLocale || "en";
   const isRTL = locale === "fa";
 
   useEffect(() => {

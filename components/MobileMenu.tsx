@@ -2,10 +2,17 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { locales } from "@/i18n/config";
 
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);
   const firstLinkRef = useRef<HTMLAnchorElement | null>(null);
+  const t = useTranslations();
+  const pathname = usePathname() || "/en";
+  const currentLocale = (pathname.split("/").filter(Boolean)[0] ?? "en") as string;
+  const locale = locales.includes(currentLocale as typeof locales[number]) ? (currentLocale as typeof locales[number]) : "en";
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -44,7 +51,7 @@ export default function MobileMenu() {
         >
           <div className="p-4">
             <div className="flex items-center justify-between">
-              <div className="text-lg font-semibold" style={{ fontFamily: "var(--font-display)" }}>Edvard Grieg</div>
+              <div className="text-lg font-semibold" style={{ fontFamily: "var(--font-display)" }}>{t("site.title")}</div>
               <button
                 type="button"
                 aria-label="Close menu"
@@ -55,9 +62,10 @@ export default function MobileMenu() {
               </button>
             </div>
             <nav className="mt-4 grid gap-2 text-sm pb-3">
-              <Link href="/works" ref={firstLinkRef} onClick={() => setOpen(false)} className="px-3 py-2 rounded-md hover:bg-foreground/10">Works</Link>
-              <Link href="/biography" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md hover:bg-foreground/10">Biography</Link>
-              <Link href="/listen" onClick={() => setOpen(false)} className="px-3 py-2 rounded-md hover:bg-foreground/10">Listen</Link>
+              <Link href={`/${locale}/works`} ref={firstLinkRef} onClick={() => setOpen(false)} className="px-3 py-2 rounded-md hover:bg-foreground/10">{t("nav.works")}</Link>
+              <Link href={`/${locale}/biography`} onClick={() => setOpen(false)} className="px-3 py-2 rounded-md hover:bg-foreground/10">{t("nav.biography")}</Link>
+              <Link href={`/${locale}/listen`} onClick={() => setOpen(false)} className="px-3 py-2 rounded-md hover:bg-foreground/10">{t("nav.listen")}</Link>
+              <Link href={`/${locale}/blog`} onClick={() => setOpen(false)} className="px-3 py-2 rounded-md hover:bg-foreground/10">{t("nav.blog")}</Link>
             </nav>
           </div>
         </div>

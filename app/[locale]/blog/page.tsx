@@ -1,8 +1,9 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { getAllMarkdown } from "@/lib/markdown";
 import { getTranslations } from "next-intl/server";
 
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 
 export default async function BlogIndexPage({ params }: { params: Promise<{ locale: string }> }) {
     const t = await getTranslations();
@@ -28,6 +29,14 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ loca
 			</ul>
 		</section>
 	);
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+    const t = await getTranslations();
+    return {
+        title: t("blog.title"),
+        description: t("home.lead"),
+    };
 }
 
 

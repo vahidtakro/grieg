@@ -36,8 +36,8 @@ export default function Sidebar() {
         <div className="absolute inset-0 img-blend" style={{ backgroundImage: "url(/grieg/grieg.jpg)", backgroundSize: "cover", backgroundPosition: "center 20%" }} />
         <div className="absolute inset-0 overlay-side" />
         <div className="absolute right-0 top-0 h-full w-[6px] bg-[--accent] opacity-60" />
-        <div className="relative text-xl font-semibold tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
-          <Link href={`/${locale}`}>Edvard Grieg</Link>
+        <div className="relative text-xl font-semibold tracking-tight">
+          <Link href={`/${locale}`}>{t("site.title")}</Link>
         </div>
         <div className="relative mt-2 text-xs text-foreground/70">{t("site.tagline")}</div>
       </div>

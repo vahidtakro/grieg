@@ -7,14 +7,28 @@
 	},
 	"site": {
 		"title": "Edvard Grieg",
-		"tagline": "Composer & Pianist"
+    "tagline": "Composer & Pianist",
+    "footerNote": "Unofficial site."
 	},
 	"home": {
 		"explore": "Explore works",
-		"listen": "Listen"
+    "listen": "Listen",
+    "lead": "Norwegian composer and pianist (1843–1907). Celebrated for his lyricism and national romantic style. Explore selected works, a short biography, and recordings."
 	},
 	"blog": {
-		"title": "Blog"
+		"title": "Blog",
+		"back": "Back to blog",
+		"notFoundTitle": "Not found",
+		"notFoundMessage": "The requested post was not found. Go back to the"
+	},
+	"works": {
+		"intro": "A small selection of notable pieces. This is a starter—you can expand with full catalog data later.",
+		"detailPlaceholder": "This is a starter template. Replace this text with program notes, movements, instrumentation, and media embeds."
+	},
+	"listen": {
+		"intro": "Add embeds or links to recordings here. For example, YouTube, Spotify, or self-hosted audio.",
+		"youtubeLink": "YouTube: Grieg Piano Concerto",
+		"spotifyLink": "Spotify: Edvard Grieg"
 	},
 	"biography": {
 		"title": "Biography"

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
 export default async function Home() {
@@ -9,14 +10,12 @@ export default async function Home() {
 				<div className="absolute inset-0 img-blend" style={{ backgroundImage: "url(/grieg/grieg.png)", backgroundSize: "cover", backgroundPosition: "center 20%" }} />
 				<div className="absolute inset-0 overlay-hero" />
 				<div className="relative max-w-3xl px-6 md:px-8 py-10 md:py-14">
-				<h1 className="hero-title text-4xl md:text-6xl font-semibold tracking-tight">
-					Edvard Grieg
-				</h1>
-				<p className="mt-4 text-base md:text-lg text-foreground/80 leading-relaxed">
-					Norwegian composer and pianist (1843–1907). Celebrated for his lyricism and
-					national romantic style. Explore selected works, a short biography, and
-					recordings.
-				</p>
+                <h1 className="hero-title text-4xl md:text-6xl font-semibold tracking-tight">
+                    {t("site.title")}
+                </h1>
+                <p className="mt-4 text-base md:text-lg text-foreground/80 leading-relaxed">
+                    {t("home.lead")}
+                </p>
 				<div className="mt-8 flex gap-3">
 					<Link href="works" className="px-4 py-2 rounded-md bg-foreground text-background text-sm md:text-base">
 						{t("home.explore")}
@@ -31,6 +30,16 @@ export default async function Home() {
 			<div className="mt-16 md:mt-24" />
 		</section>
 	);
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+    const t = await getTranslations();
+    const title = t("site.title");
+    const description = t("home.lead");
+    return {
+        title,
+        description,
+    };
 }
 
 

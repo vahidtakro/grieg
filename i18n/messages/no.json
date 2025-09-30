@@ -7,14 +7,28 @@
 	},
 	"site": {
 		"title": "Edvard Grieg",
-		"tagline": "Komponist og pianist"
+    "tagline": "Komponist og pianist",
+    "footerNote": "Uoffisiell side."
 	},
 	"home": {
 		"explore": "Utforsk verker",
-		"listen": "Lytt"
+    "listen": "Lytt",
+    "lead": "Norsk komponist og pianist (1843–1907). Feiret for sin lyrikk og nasjonalromantiske stil. Utforsk utvalgte verker, en kort biografi og innspillinger."
 	},
 	"blog": {
-		"title": "Blogg"
+		"title": "Blogg",
+		"back": "Tilbake til blogg",
+		"notFoundTitle": "Ikke funnet",
+		"notFoundMessage": "Innlegget ble ikke funnet. Gå tilbake til"
+	},
+	"works": {
+		"intro": "Et lite utvalg av bemerkelsesverdige verk. Dette er en start—du kan utvide med full katalog senere.",
+		"detailPlaceholder": "Dette er en startmal. Bytt ut denne teksten med programnoter, satser, besetning og medier."
+	},
+	"listen": {
+		"intro": "Legg til innebygginger eller lenker til innspillinger her. For eksempel YouTube, Spotify eller selvhostet lyd.",
+		"youtubeLink": "YouTube: Grieg klaverkonsert",
+		"spotifyLink": "Spotify: Edvard Grieg"
 	},
 	"biography": {
 		"title": "Biografi"

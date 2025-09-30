@@ -1,4 +1,5 @@
 import { getMarkdownBySlug } from "@/lib/markdown";
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
 export default async function BiographyPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -12,6 +13,14 @@ export default async function BiographyPage({ params }: { params: Promise<{ loca
 			<article className="prose mt-6 max-w-3xl text-sm md:text-base leading-relaxed" dangerouslySetInnerHTML={{ __html: html }} />
 		</section>
 	);
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+    const t = await getTranslations();
+    return {
+        title: t("biography.title"),
+        description: t("home.lead"),
+    };
 }
 
 

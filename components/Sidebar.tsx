@@ -28,8 +28,8 @@ function NavLink({ href, label }: { href: string; label: string }) {
 export default function Sidebar() {
   const t = useTranslations();
   const pathname = usePathname() || "/en";
-  const currentLocale = (pathname.split("/").filter(Boolean)[0] ?? "en");
-  const locale = locales.includes(currentLocale as any) ? currentLocale : "en";
+  const currentLocale = (pathname.split("/").filter(Boolean)[0] ?? "en") as string;
+  const locale = locales.includes(currentLocale as typeof locales[number]) ? currentLocale as typeof locales[number] : "en";
   return (
     <aside className="hidden md:flex sticky top-0 h-dvh flex-col w-[260px] border-r border-foreground/10 bg-gradient-to-b from-background to-background/60">
       <div className="relative px-5 py-6 border-b border-foreground/10 overflow-hidden">

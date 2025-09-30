@@ -7,7 +7,7 @@ import { locales } from "@/i18n/config";
 function replaceLocaleInPath(pathname: string, nextLocale: string): string {
 	const parts = pathname.split("/").filter(Boolean);
 	if (parts.length === 0) return `/${nextLocale}`;
-	if (locales.includes(parts[0] as any)) {
+  if (locales.includes(parts[0] as typeof locales[number])) {
 		parts[0] = nextLocale;
 		return "/" + parts.join("/");
 	}

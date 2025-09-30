@@ -15,10 +15,10 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 const playfair = Playfair_Display({ variable: "--font-display", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "Edvard Grieg — Composer",
-	description:
-		"A minimal website dedicated to the life and works of Norwegian composer Edvard Grieg.",
-	icons: { icon: "/favicon.svg" },
+    title: "Edvard Grieg — Composer",
+    description:
+        "A minimal website dedicated to the life and works of Norwegian composer Edvard Grieg.",
+    icons: { icon: "/favicon.svg" },
 };
 
 export default async function LocaleLayout({ children }: { children: React.ReactNode }) {

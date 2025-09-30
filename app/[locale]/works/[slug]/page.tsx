@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import { getWorkBySlug, works } from "../../../../content/works/data";
-import type { Metadata } from "next";
 
 type Params = { slug: string; locale: string };
 

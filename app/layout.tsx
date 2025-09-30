@@ -31,9 +31,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   const isRTL = locale === "fa";
   return (
     <html suppressHydrationWarning lang={locale} dir={isRTL ? "rtl" : "ltr"}>
-      <head>
-        <link rel="stylesheet" href="/vendor/flag-icons/css/flag-icons.min.css" />
-      </head>
+      <head />
       <body suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased`}>{children}</body>
     </html>
   );

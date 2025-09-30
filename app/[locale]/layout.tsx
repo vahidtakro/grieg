@@ -24,10 +24,9 @@ export const metadata: Metadata = {
 export default async function LocaleLayout({ children }: { children: React.ReactNode }) {
     const locale = await getLocale();
     const messages = await getMessages();
-    const isRTL = locale === "fa";
     return (
         <NextIntlClientProvider messages={messages} locale={locale}>
-            <div lang={locale} dir={isRTL ? "rtl" : "ltr"} className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased h-dvh overflow-hidden md:grid md:grid-cols-[260px_1fr]`}>
+            <div className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased h-dvh overflow-hidden md:grid md:grid-cols-[260px_1fr]`}>
                 <Sidebar />
 
                 <div className="relative h-dvh flex flex-col overflow-y-auto">

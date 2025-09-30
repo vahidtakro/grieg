@@ -3,14 +3,14 @@ import Link from "next/link";
 
 export const dynamic = "force-static";
 
-export async function generateStaticParams({ params }: { params: Promise<{ locale: string }> }) {
-	const { locale } = await params;
+export async function generateStaticParams({ params }: { params: { locale: string } }) {
+	const { locale } = params;
 	const posts = await getAllMarkdown(`blog/${locale}`);
 	return posts.map((p) => ({ slug: p.slug }));
 }
 
-export default async function BlogPostPage({ params }: { params: Promise<{ slug: string; locale: string }> }) {
-	const { locale, slug } = await params;
+export default async function BlogPostPage({ params }: { params: { slug: string; locale: string } }) {
+	const { locale, slug } = params;
 	const post = await getMarkdownBySlug(`blog/${locale}`, slug);
 	if (!post) {
 		return (

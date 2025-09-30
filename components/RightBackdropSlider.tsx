@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const images = [
   "/grieg/grieg-house.jpg",
@@ -20,7 +21,7 @@ export default function RightBackdropSlider() {
   return (
     <div className="right-slider" aria-hidden>
       {images.map((src, i) => (
-        <img key={src} src={src} alt="" className={i === index ? "active" : ""} />
+        <Image key={src} src={src} alt="" className={i === index ? "active" : ""} fill sizes="(min-width: 768px) 60vw, 100vw" priority={i === 0} />
       ))}
     </div>
   );

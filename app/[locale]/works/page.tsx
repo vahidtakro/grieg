@@ -8,7 +8,7 @@ export default async function WorksPage({ params }: { params: Promise<{ locale: 
 	const { locale } = await params;
 	const works = await getAllMarkdown(`works/${locale}`);
 	return (
-		<section className="container-padded py-14 md:py-20">
+		<section className="py-2 md:py-20">
 			<h1 className="hero-title text-3xl md:text-5xl font-semibold tracking-tight">{t("nav.works")}</h1>
 			<p className="mt-6 max-w-2xl text-[1.0625rem] md:text-base leading-[1.7] text-foreground/85">
 				{t("works.intro")}

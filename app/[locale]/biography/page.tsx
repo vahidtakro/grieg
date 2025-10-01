@@ -8,7 +8,7 @@ export default async function BiographyPage({ params }: { params: Promise<{ loca
 	const doc = await getMarkdownBySlug("biography", locale);
 	const html = doc?.html ?? "";
 	return (
-		<section className="container-padded py-14 md:py-20">
+		<section className="py-14 md:py-20">
 			<h1 className="hero-title text-3xl md:text-5xl font-semibold tracking-tight">{t("biography.title")}</h1>
 			<article className="prose mt-6 max-w-3xl text-sm md:text-base leading-relaxed" dangerouslySetInnerHTML={{ __html: html }} />
 		</section>

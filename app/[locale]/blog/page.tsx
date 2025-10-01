@@ -10,7 +10,7 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ loca
     const { locale } = await params;
 	const posts = await getAllMarkdown(`blog/${locale}`);
 	return (
-		<section className="container-padded py-14 md:py-20">
+		<section className="py-2 md:py-20">
 			<h1 className="hero-title text-3xl md:text-5xl font-semibold tracking-tight">{t("blog.title")}</h1>
 			<ul className="mt-6 max-w-3xl space-y-4 text-[1.0625rem] md:text-base leading-[1.7]">
 				{posts.map((post) => (

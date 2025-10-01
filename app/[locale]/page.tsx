@@ -10,7 +10,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 	const latestPosts = (await getAllMarkdown(`blog/${locale}`)).slice(0, 3);
 	const latestWorks = (await getAllMarkdown(`works/${locale}`)).slice(0, 3);
 	return (
-		<section className="container-padded pt-14 md:pt-20 pb-20 md:pb-28">
+		<section className="pt-14 md:pt-20 pb-20 md:pb-28">
 			<div className="relative overflow-hidden rounded-xl border border-foreground/10 bg-background/60">
 				<div className="absolute inset-0 img-blend" style={{ backgroundImage: "url(/grieg/grieg.png)", backgroundSize: "cover", backgroundPosition: "center 20%" }} />
 				<div className="absolute inset-0 overlay-hero" />

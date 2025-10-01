@@ -22,7 +22,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     const post = await getMarkdownBySlug(`blog/${locale}`, slug);
     if (!post) {
         return (
-            <section className="container-padded py-14 md:py-20">
+            <section className="py-2 md:py-20">
                 <h1 className="hero-title text-3xl md:text-5xl font-semibold tracking-tight">{t("blog.notFoundTitle")}</h1>
                 <p className="mt-4">{t("blog.notFoundMessage")} <Link className="underline underline-offset-4" href="../blog">{t("blog.title")}</Link>.</p>
             </section>
@@ -30,7 +30,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     }
 
 	return (
-		<section className="container-padded py-14 md:py-20">
+		<section className="py-2 md:py-20">
             <div className="text-sm text-foreground/60 mb-3">
                 <Link className="underline underline-offset-4 hover:no-underline" href="../blog">{isRTL ? `${t("blog.back")} →` : `← ${t("blog.back")}`}</Link>
             </div>

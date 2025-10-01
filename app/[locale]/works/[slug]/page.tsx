@@ -21,7 +21,7 @@ export default async function WorkDetailPage({ params }: { params: Promise<Param
     if (!work) return notFound();
 
 	return (
-		<section className="container-padded py-14 md:py-20">
+		<section className="py-2 md:py-20">
 			<h1 className="hero-title text-3xl md:text-5xl font-semibold tracking-tight">{work.data.title || work.slug}</h1>
 			{work.data.year ? (
 				<p className="mt-2 text-sm md:text-base text-foreground/70">{work.data.year as string}</p>

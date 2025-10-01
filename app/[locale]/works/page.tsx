@@ -10,10 +10,10 @@ export default async function WorksPage({ params }: { params: Promise<{ locale: 
 	return (
 		<section className="container-padded py-14 md:py-20">
 			<h1 className="hero-title text-3xl md:text-5xl font-semibold tracking-tight">{t("nav.works")}</h1>
-			<p className="mt-6 max-w-2xl text-sm md:text-base text-foreground/85">
+			<p className="mt-6 max-w-2xl text-[1.0625rem] md:text-base leading-[1.7] text-foreground/85">
 				{t("works.intro")}
 			</p>
-			<ul className="mt-6 grid gap-3 text-sm md:text-base">
+			<ul className="mt-6 grid gap-3 text-[1.0625rem] md:text-base leading-[1.7]">
 				{works.map((work) => (
 					<li key={work.slug} className="border-b border-foreground/10 pb-3">
 						<div className="inline-flex items-baseline gap-2">
@@ -23,7 +23,7 @@ export default async function WorksPage({ params }: { params: Promise<{ locale: 
 							{work.data.year ? <span className="text-foreground/60">{work.data.year as string}</span> : null}
 						</div>
 						{work.data.excerpt ? (
-							<p className="mt-1 text-foreground/70">{work.data.excerpt as string}</p>
+							<p className="mt-1 text-[1.0625rem] md:text-base leading-[1.7] text-foreground/70">{work.data.excerpt as string}</p>
 						) : null}
 					</li>
 				))}

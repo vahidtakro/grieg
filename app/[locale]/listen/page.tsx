@@ -6,12 +6,12 @@ export default async function ListenPage() {
 	return (
 		<section className="container-padded py-14 md:py-20">
 			<h1 className="hero-title text-3xl md:text-5xl font-semibold tracking-tight">{t("nav.listen")}</h1>
-			<p className="mt-6 max-w-2xl text-sm md:text-base text-foreground/85">
+			<p className="mt-6 max-w-2xl text-[1.0625rem] md:text-base leading-[1.7] text-foreground/85">
                 {t("listen.intro")}
 			</p>
-			<div className="mt-8 grid gap-4">
-                <a className="text-sm md:text-base underline underline-offset-4" href="https://www.youtube.com/results?search_query=edvard+grieg+piano+concerto" target="_blank" rel="noreferrer noopener">{t("listen.youtubeLink")}</a>
-                <a className="text-sm md:text-base underline underline-offset-4" href="https://open.spotify.com/search/edvard%20grieg" target="_blank" rel="noreferrer noopener">{t("listen.spotifyLink")}</a>
+			<div className="mt-8 grid gap-4 text-[1.0625rem] md:text-base leading-[1.7]">
+				<a className="underline underline-offset-4" href="https://www.youtube.com/results?search_query=edvard+grieg+piano+concerto" target="_blank" rel="noreferrer noopener">{t("listen.youtubeLink")}</a>
+				<a className="underline underline-offset-4" href="https://open.spotify.com/search/edvard%20grieg" target="_blank" rel="noreferrer noopener">{t("listen.spotifyLink")}</a>
 			</div>
 		</section>
 	);

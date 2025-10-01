@@ -61,7 +61,7 @@ export default function MobileMenu() {
         >
           <div className="p-4">
             <div className="flex items-center justify-between">
-              <div className="text-lg font-semibold" style={{ fontFamily: typeof window !== 'undefined' && document.documentElement.getAttribute('data-locale') === 'fa' ? 'Sahel FD, var(--font-display)' as any : 'var(--font-display)' }}>{t("site.title")}</div>
+              <div className="text-lg font-semibold" style={{ fontFamily: locale === 'fa' ? '"Sahel FD", var(--font-display)' : 'var(--font-display)' }}>{t("site.title")}</div>
               <button
                 type="button"
                 aria-label="Close menu"

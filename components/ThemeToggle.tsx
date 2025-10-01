@@ -30,9 +30,11 @@ export default function ThemeToggle() {
       const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
       const resolved = prefersDark ? "dark" : "light";
       if (resolved !== theme) setTheme(resolved);
-    } catch (_) {
+    } catch {
       // ignore
     }
+    // We intentionally run this only once on mount to set initial theme.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const isDark = theme === "dark";

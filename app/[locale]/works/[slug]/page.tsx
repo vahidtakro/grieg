@@ -16,7 +16,6 @@ export async function generateStaticParams() {
 }
 
 export default async function WorkDetailPage({ params }: { params: Promise<Params> }) {
-    const t = await getTranslations();
     const { slug, locale } = await params;
     const work = await getMarkdownBySlug(`works/${locale}`, slug);
     if (!work) return notFound();

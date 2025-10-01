@@ -32,7 +32,7 @@
 		"detailPlaceholder": "Dette er en startmal. Bytt ut denne teksten med programnoter, satser, besetning og medier."
 	},
 	"listen": {
-		"intro": "Legg til innebygginger eller lenker til innspillinger her. For eksempel YouTube, Spotify eller selvhostet lyd.",
+		"intro": "Lenker til gratis innspillinger.",
 		"youtubeLink": "YouTube: Grieg klaverkonsert",
 		"spotifyLink": "Spotify: Edvard Grieg"
 	},

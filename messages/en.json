@@ -32,7 +32,7 @@
 		"detailPlaceholder": "This is a starter template. Replace this text with program notes, movements, instrumentation, and media embeds."
 	},
 	"listen": {
-		"intro": "Add embeds or links to recordings here. For example, YouTube, Spotify, or self-hosted audio.",
+		"intro": "Link to free recordings.",
 		"youtubeLink": "YouTube: Grieg Piano Concerto",
 		"spotifyLink": "Spotify: Edvard Grieg"
 	},

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "@/components/ThemeToggle";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import { locales } from "@/i18n/config";
+import { locales } from "../src/i18n/config";
 import { useTranslations } from "next-intl";
 
 function NavLink({ href, label }: { href: string; label: string }) {

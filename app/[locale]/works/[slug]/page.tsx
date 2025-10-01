@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getMarkdownBySlug, getAllMarkdown } from "@/lib/markdown";
 import { getTranslations } from "next-intl/server";
-import { locales } from "@/i18n/config";
+import { locales } from "../../../../src/i18n/config";
 
 type Params = { slug: string; locale: string };
 

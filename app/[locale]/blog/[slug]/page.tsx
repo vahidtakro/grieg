@@ -1,10 +1,10 @@
 import { getAllMarkdown, getMarkdownBySlug } from "@/lib/markdown";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { locales } from "@/i18n/config";
+import { locales } from "../../../../src/i18n/config";
 import { getTranslations } from "next-intl/server";
 
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 
 export async function generateStaticParams() {
     const params: Array<{ slug: string; locale: string }> = [];

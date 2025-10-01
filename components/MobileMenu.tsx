@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { locales } from "@/i18n/config";
+import { locales } from "../src/i18n/config";
 
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);

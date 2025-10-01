@@ -32,10 +32,9 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function LocaleLayout({ children }: { children: React.ReactNode }) {
     const locale = await getLocale();
-    const messages = await getMessages();
     const t = await getTranslations();
     return (
-        <NextIntlClientProvider messages={messages} locale={locale}>
+        <NextIntlClientProvider>
             <DocumentAttributes initialLocale={locale} />
             <div className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased h-dvh overflow-hidden md:grid md:grid-cols-[260px_1fr]`}>
                 <Sidebar />

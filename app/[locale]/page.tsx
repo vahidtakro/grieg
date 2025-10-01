@@ -1,11 +1,12 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getAllMarkdown } from "@/lib/markdown";
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
 	const t = await getTranslations();
 	const { locale } = await params;
+	setRequestLocale(locale);
 	const latestPosts = (await getAllMarkdown(`blog/${locale}`)).slice(0, 3);
 	const latestWorks = (await getAllMarkdown(`works/${locale}`)).slice(0, 3);
 	return (

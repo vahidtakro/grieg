@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { locales } from "@/i18n/config";
+import { locales } from "../src/i18n/config";
 import Image from "next/image";
 
 function replaceLocaleInPath(pathname: string, nextLocale: string): string {

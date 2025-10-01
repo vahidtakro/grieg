@@ -63,7 +63,7 @@ export default function GalleryLightbox({ items, creditLabel }: { items: Gallery
           carousel={{ finite: false, padding: 0, imageFit: "contain" }}
           controller={{ closeOnBackdropClick: true }}
           render={{
-            slide: (props: any) => <NextJsLightboxImage {...props} />,
+            slide: (props) => <NextJsLightboxImage {...props} />,
             buttonPrev: () => (
               <button data-yarl-prev aria-label="Previous" className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded bg-black/50 text-white">‹</button>
             ),

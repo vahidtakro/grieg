@@ -12,7 +12,7 @@ type EventItem = {
   providerUrl?: string;
 };
 
-async function fetchEvents(_locale: string): Promise<{ upcoming: EventItem[]; past: EventItem[] }> {
+async function fetchEvents(): Promise<{ upcoming: EventItem[]; past: EventItem[] }> {
   // Provider 0 (preferred): concerti.de composer page (HTML parse)
   // https://www.concerti.de/komponisten/edvard-grieg/
   const results: EventItem[] = [];
@@ -296,7 +296,7 @@ async function fetchEvents(_locale: string): Promise<{ upcoming: EventItem[]; pa
 export default async function EventsPage({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams?: Promise<Record<string, string | string[] | undefined>> }) {
   const t = await getTranslations();
   const { locale } = await params;
-  const { upcoming, past } = await fetchEvents(locale);
+  const { upcoming, past } = await fetchEvents();
   // Optional filters via query params: q, city, country, from, to
   const rawSearch = (await searchParams) || {};
   const sp = rawSearch as Record<string, string | undefined>;

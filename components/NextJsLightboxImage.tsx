@@ -1,22 +1,22 @@
 "use client";
 
 import Image from "next/image";
-import { isImageFitCover, isImageSlide, useLightboxProps, useLightboxState } from "yet-another-react-lightbox";
+import { useLightboxProps, useLightboxState } from "yet-another-react-lightbox";
 import type { ReactElement } from "react";
 
-type Slide = {
+type SlideData = {
   src: string;
   width?: number;
   height?: number;
   blurDataURL?: string;
 };
 
-function isNextJsImage(slide: unknown): slide is Slide {
-  const s = slide as Slide;
-  return isImageSlide(s) && typeof s.width === "number" && typeof s.height === "number";
+function isNextJsImage(slide: unknown): slide is SlideData {
+  const s = slide as SlideData;
+  return !!s && typeof s.src === "string" && typeof s.width === "number" && typeof s.height === "number";
 }
 
-export default function NextJsLightboxImage({ slide, offset, rect }: { slide: Slide; offset: number; rect: { width: number; height: number } }): ReactElement | null {
+export default function NextJsLightboxImage({ slide, offset, rect }: { slide: unknown; offset: number; rect: { width: number; height: number } }): ReactElement | null {
   const {
     on: { click },
     carousel: { imageFit },
@@ -24,7 +24,7 @@ export default function NextJsLightboxImage({ slide, offset, rect }: { slide: Sl
 
   const { currentIndex } = useLightboxState();
 
-  const cover = isImageSlide(slide) && isImageFitCover(slide, imageFit);
+  const cover = imageFit === "cover";
 
   if (!isNextJsImage(slide)) return null;
 
@@ -35,11 +35,11 @@ export default function NextJsLightboxImage({ slide, offset, rect }: { slide: Sl
     <div style={{ position: "relative", width, height }}>
       <Image
         fill
-        alt={slide.src}
-        src={slide.src}
+        alt={(slide as SlideData).src}
+        src={(slide as SlideData).src}
         loading="eager"
         draggable={false}
-        placeholder={slide.blurDataURL ? "blur" : undefined}
+        placeholder={(slide as SlideData).blurDataURL ? "blur" : undefined}
         style={{ objectFit: cover ? "cover" : "contain", cursor: click ? "pointer" : undefined }}
         sizes={`${Math.ceil((width / window.innerWidth) * 100)}vw`}
         onClick={offset === 0 ? () => click?.({ index: currentIndex }) : undefined}

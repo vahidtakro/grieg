@@ -1,4 +1,3 @@
-import Image from "next/image";
 import type { Metadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
 import GalleryLightbox, { GalleryItem } from "@/components/GalleryLightbox";

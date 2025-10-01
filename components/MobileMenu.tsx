@@ -51,7 +51,7 @@ export default function MobileMenu() {
         >
           <div className="p-4">
             <div className="flex items-center justify-between">
-              <div className="text-lg font-semibold" style={{ fontFamily: "var(--font-display)" }}>{t("site.title")}</div>
+              <div className="text-lg font-semibold" style={{ fontFamily: typeof window !== 'undefined' && document.documentElement.getAttribute('data-locale') === 'fa' ? 'Sahel FD, var(--font-display)' as any : 'var(--font-display)' }}>{t("site.title")}</div>
               <button
                 type="button"
                 aria-label="Close menu"
@@ -62,7 +62,8 @@ export default function MobileMenu() {
               </button>
             </div>
             <nav className="mt-4 grid gap-2 text-sm pb-3">
-              <Link href={`/${locale}/works`} ref={firstLinkRef} onClick={() => setOpen(false)} className="px-3 py-2 rounded-md hover:bg-foreground/10">{t("nav.works")}</Link>
+              <Link href={`/${locale}`} ref={firstLinkRef} onClick={() => setOpen(false)} className="px-3 py-2 rounded-md hover:bg-foreground/10">{t("nav.home")}</Link>
+              <Link href={`/${locale}/works`} onClick={() => setOpen(false)} className="px-3 py-2 rounded-md hover:bg-foreground/10">{t("nav.works")}</Link>
               <Link href={`/${locale}/biography`} onClick={() => setOpen(false)} className="px-3 py-2 rounded-md hover:bg-foreground/10">{t("nav.biography")}</Link>
               <Link href={`/${locale}/listen`} onClick={() => setOpen(false)} className="px-3 py-2 rounded-md hover:bg-foreground/10">{t("nav.listen")}</Link>
               <Link href={`/${locale}/blog`} onClick={() => setOpen(false)} className="px-3 py-2 rounded-md hover:bg-foreground/10">{t("nav.blog")}</Link>

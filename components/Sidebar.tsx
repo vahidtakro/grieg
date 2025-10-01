@@ -44,6 +44,7 @@ export default function Sidebar() {
       <div className="relative flex-1">
         <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "url(/notes-sheet.svg)", backgroundRepeat: "repeat", backgroundSize: "360px 270px" }} />
         <nav className="relative z-10 px-3 py-4 gap-1 flex flex-col">
+          <NavLink href={`/${locale}`} label={t("nav.home")} />
           <NavLink href={`/${locale}/works`} label={t("nav.works")} />
           <NavLink href={`/${locale}/biography`} label={t("nav.biography")} />
           <NavLink href={`/${locale}/listen`} label={t("nav.listen")} />

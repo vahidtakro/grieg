@@ -41,7 +41,7 @@ export default async function LocaleLayout({ children }: { children: React.React
 
                 <div className="relative h-dvh flex flex-col overflow-y-auto">
                     <div className="md:hidden sticky top-0 z-20 flex items-center justify-between px-4 py-3 border-b border-foreground/10 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-                        <Link href={`/${locale}`} className="text-lg font-semibold" style={{ fontFamily: "var(--font-display)" }}>{t("site.title")}</Link>
+                        <Link href={`/${locale}`} className="text-lg font-semibold" style={{ fontFamily: locale === "fa" ? '"Sahel FD", var(--font-display)' : 'var(--font-display)' }}>{t("site.title")}</Link>
                         <div className="flex items-center gap-2">
                             <LanguageSwitcher />
                             <ThemeToggle />

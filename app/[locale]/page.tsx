@@ -34,7 +34,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 			<div className="mt-16 md:mt-24" />
 
 			{/* Latest sections */}
-			<section className="container-padded mt-8 grid gap-10 md:gap-12 md:grid-cols-2">
+			<section className="mt-8 grid gap-10 md:gap-12 md:grid-cols-2">
 				<div className="rounded-xl border border-foreground/10 bg-background/60 p-6">
 					<div className="flex items-center justify-between mb-4">
 						<h2 className="text-xl md:text-2xl font-semibold tracking-tight">{t("home.latestWorks")}</h2>

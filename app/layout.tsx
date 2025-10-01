@@ -31,7 +31,14 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   const isRTL = locale === "fa";
   return (
     <html suppressHydrationWarning lang={locale} dir={isRTL ? "rtl" : "ltr"}>
-      <head />
+      <head>
+        {/* Apply saved theme before paint to avoid flashes and preserve preference */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(() => { try { const saved = localStorage.getItem('theme-preference'); const theme = (saved === 'light' || saved === 'dark') ? saved : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); document.documentElement.dataset.theme = theme; } catch (_) {} })();`,
+          }}
+        />
+      </head>
       <body suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased`}>{children}</body>
     </html>
   );

@@ -41,7 +41,7 @@ export default async function LocaleLayout({ children }: { children: React.React
                 <Sidebar />
 
                 <div className="relative h-dvh flex flex-col overflow-y-auto">
-                    <div className="md:hidden sticky top-0 z-20 flex items-center justify-between px-5 py-3 border-b border-foreground/10 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+                    <div className="md:hidden sticky top-0 z-20 flex items-center justify-between px-4 py-3 border-b border-foreground/10 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
                         <Link href={`/${locale}`} className="text-lg font-semibold" style={{ fontFamily: "var(--font-display)" }}>{t("site.title")}</Link>
                         <div className="flex items-center gap-2">
                             <LanguageSwitcher />
@@ -56,7 +56,7 @@ export default async function LocaleLayout({ children }: { children: React.React
                     </div>
 
                     <div className="relative justify-self-start ml-0 w-full max-w-6xl border-r border-foreground/10 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-                        <main className="min-h-[calc(100dvh-56px)] md:min-h-[100dvh] px-6 md:px-10 py-10">
+                        <main className="min-h-[calc(100dvh-56px)] md:min-h-[100dvh] px-4 md:px-10 py-10">
                             <PageFade>{children}</PageFade>
                         </main>
                         <footer className="px-6 md:px-10 py-8 text-xs text-foreground/70 border-t border-foreground/10">

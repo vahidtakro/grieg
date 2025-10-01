@@ -12,7 +12,7 @@ type EventItem = {
   providerUrl?: string;
 };
 
-async function fetchEvents(locale: string): Promise<{ upcoming: EventItem[]; past: EventItem[] }> {
+async function fetchEvents(_locale: string): Promise<{ upcoming: EventItem[]; past: EventItem[] }> {
   // Provider 0 (preferred): concerti.de composer page (HTML parse)
   // https://www.concerti.de/komponisten/edvard-grieg/
   const results: EventItem[] = [];
@@ -184,8 +184,25 @@ async function fetchEvents(locale: string): Promise<{ upcoming: EventItem[]; pas
       tmUrl.searchParams.set("locale", "*");
       const res = await fetch(tmUrl.toString(), { next: { revalidate: 60 * 30 } });
       if (res.ok) {
-        const data = (await res.json()) as any;
-        const items: any[] = data?._embedded?.events || [];
+        const data = (await res.json()) as unknown;
+        const items = (
+          (data as {
+            _embedded?: {
+              events?: Array<{
+                id?: string;
+                name?: string;
+                url?: string;
+                dates?: { start?: { dateTime?: string; localDate?: string } };
+                _embedded?: {
+                  venues?: Array<{
+                    city?: { name?: string };
+                    country?: { name?: string; countryCode?: string };
+                  }>;
+                };
+              }>;
+            };
+          })._embedded?.events || []
+        );
         for (const ev of items) {
           const dateStr: string | undefined = ev?.dates?.start?.dateTime || ev?.dates?.start?.localDate;
           const venue = ev?._embedded?.venues?.[0];
@@ -223,8 +240,18 @@ async function fetchEvents(locale: string): Promise<{ upcoming: EventItem[]; pas
           next: { revalidate: 60 * 30 },
         });
         if (res.ok) {
-          const data = (await res.json()) as any;
-          const items: any[] = data?.events || [];
+          const data = (await res.json()) as unknown;
+          const items = (
+            (data as {
+              events?: Array<{
+                id?: string;
+                name?: { text?: string };
+                url?: string;
+                start?: { utc?: string; local?: string };
+                venue?: { address?: { city?: string; country?: string } };
+              }>;
+            }).events || []
+          );
           for (const ev of items) {
             const dateStr: string | undefined = ev?.start?.utc || ev?.start?.local;
             const venue = ev?.venue;

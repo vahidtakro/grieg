@@ -5,7 +5,8 @@
 		"biography": "Biography",
 		"listen": "Listen",
 		"blog": "Blog",
-		"events": "Events"
+		"events": "Events",
+		"gallery": "Gallery"
 	},
 	"site": {
 		"title": "Edvard Grieg",
@@ -44,6 +45,11 @@
         "upcoming": "Upcoming",
         "past": "Past",
         "noEvents": "No events to show."
+    },
+    "gallery": {
+        "title": "Gallery",
+        "intro": "Photos related to Edvard Grieg and Bergen cultural heritage.",
+        "credit": "Credit"
     },
 	"notFound": {
 		"title": "Page not found",

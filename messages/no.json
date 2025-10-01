@@ -5,7 +5,8 @@
 		"biography": "Biografi",
 		"listen": "Lytt",
 		"blog": "Blogg",
-		"events": "Arrangementer"
+		"events": "Arrangementer",
+		"gallery": "Galleri"
 	},
 	"site": {
 		"title": "Edvard Grieg",
@@ -44,6 +45,11 @@
         "upcoming": "Kommende",
         "past": "Tidligere",
         "noEvents": "Ingen arrangementer å vise."
+    },
+    "gallery": {
+        "title": "Galleri",
+        "intro": "Bilder knyttet til Edvard Grieg og Bergens kulturarv.",
+        "credit": "Kreditering"
     },
 	"notFound": {
 		"title": "Siden ble ikke funnet",

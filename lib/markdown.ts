@@ -38,7 +38,35 @@ export async function parseMarkdownFile(filePath: string): Promise<MarkdownDocum
   const raw = fs.readFileSync(filePath, "utf8");
   const { content, data } = matter(raw);
   const processed = await remark().use(html, { sanitize: false }).process(content);
-  const renderedHtml = processed.toString();
+  let renderedHtml = processed.toString();
+  // Enhance images: center, constrain width, and convert following emphasized paragraph to caption
+  const figureStyle = 'margin:1.25rem auto;text-align:center;';
+  const imgStyle = 'max-width:50%;height:auto;display:block;margin:0 auto;border-radius:0;box-shadow:0 6px 24px rgba(0,0,0,0.08)';
+  const capStyle = 'display:block;margin-top:0.5rem;font-size:0.85rem;';
+  // With caption: <p><img ...></p><p><em>caption</em></p>
+  renderedHtml = renderedHtml.replace(new RegExp('<p>\\s*<img([^>]+)>\\s*<\\/p>\\s*<p><em>(.*?)<\\/em><\\/p>', 'g'), (_m, attrs, cap) => {
+    return `<figure style="${figureStyle}"><img ${String(attrs).trim()} style="${imgStyle}" /><figcaption style="${capStyle}">${cap}</figcaption></figure>`;
+  });
+  // With caption in same paragraph: <p><img ...><em>caption</em></p>
+  renderedHtml = renderedHtml.replace(new RegExp('<p>\\s*<img([^>]+)>\\s*<em>(.*?)<\\/em>\\s*<\\/p>', 'g'), (_m, attrs, cap) => {
+    return `<figure style="${figureStyle}"><img ${String(attrs).trim()} style="${imgStyle}" /><figcaption style="${capStyle}">${cap}</figcaption></figure>`;
+  });
+  // With caption in same paragraph, self-closing: <p><img .../><em>caption</em></p>
+  renderedHtml = renderedHtml.replace(new RegExp('<p>\\s*<img([^>]+)\\/>\\s*<em>(.*?)<\\/em>\\s*<\\/p>', 'g'), (_m, attrs, cap) => {
+    return `<figure style="${figureStyle}"><img ${String(attrs).trim()} style="${imgStyle}" /><figcaption style="${capStyle}">${cap}</figcaption></figure>`;
+  });
+  // With caption: <img ... /> <p><em>caption</em></p>
+  renderedHtml = renderedHtml.replace(new RegExp('<img([^>]+)\\/>\\s*<p><em>(.*?)<\\/em><\\/p>', 'g'), (_m, attrs, cap) => {
+    return `<figure style="${figureStyle}"><img ${String(attrs).trim()} style="${imgStyle}" /><figcaption style="${capStyle}">${cap}</figcaption></figure>`;
+  });
+  // Standalone image
+  renderedHtml = renderedHtml.replace(new RegExp('<p>\\s*<img([^>]+)>\\s*<\\/p>', 'g'), (_m, attrs) => {
+    return `<figure style="${figureStyle}"><img ${String(attrs).trim()} style="${imgStyle}" /></figure>`;
+  });
+  // Standalone self-closing image
+  renderedHtml = renderedHtml.replace(new RegExp('<img([^>]+)\\/>', 'g'), (_m, attrs) => {
+    return `<figure style="${figureStyle}"><img ${String(attrs).trim()} style="${imgStyle}" /></figure>`;
+  });
   const slug = path.basename(filePath).replace(/\.md$/, "");
   return { slug, content, html: renderedHtml, data: (data || {}) as MarkdownFrontMatter };
 }

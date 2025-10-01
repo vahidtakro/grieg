@@ -6,6 +6,9 @@ title: "Biografi"
 
 Edvard Hagerup Grieg var en norsk komponist og pianist, bredt ansett som en av de ledende skikkelsene i romantikken. Hans inkorporering av norsk folkemusikk i komposisjonene sine brakte ikke bare internasjonal anerkjennelse til Norges musikalske arv, men spilte også en sentral rolle i å forme landets nasjonale identitet.
 
+![Nasjonalbiblioteket i Norge](/grieg/gallery/the-national-library-of-norway--xdouhDMy_M-unsplash.jpg)
+_Foto: Nasjonalbiblioteket i Norge (Unsplash)_
+
 ## Tidlig liv og familietradisjon
 
 Edvard Grieg ble født 15. juni 1843 i Bergen, Norge, som sønn av Alexander Grieg, en kjøpmann og britisk konsul i Bergen, og Gesine Judithe Hagerup, en musikklærer. Grieg-familien sporet sine røtter tilbake til Skottland; det opprinnelige etternavnet "Greig" var forbundet med den skotske Clan Gregor. Etter slaget ved Culloden i 1746 emigrerte Griegs oldefar, Alexander Greig, og slo seg til slutt ned i Bergen rundt 1770.
@@ -40,6 +43,9 @@ Samme år som datterens død komponerte Grieg sin berømte klaverkonsert i a-mol
 
 Griegs samarbeid med dramatikeren Henrik Ibsen førte til skapelsen av scenemusikken til "Peer Gynt" i 1875, som inkluderer de berømte stykkene "I Dovregubbens hall" og "Morgenstemning." Til tross for hans opprinnelige reservasjoner om musikens åpne nasjonalisme, ble suiten en av hans mest feirede verk og hjalp til med å etablere Griegs internasjonale omdømme.
 
+![Bergen Offentlige Bibliotek](/grieg/gallery/bergen-public-library-cxIBmwCkMLA-unsplash.jpg)
+_Foto: Bergen Offentlige Bibliotek (Unsplash)_
+
 Peer Gynt-suitene, utvunnet fra scenemusikken, ble umåtelig populære og er blant de mest ofte fremførte orkesterverkene i det klassiske repertoaret. Musikken fanger perfekt de dramatiske og folkelige elementene i Ibsens skuespill mens den opprettholder Griegs særegne musikalske stemme.
 
 ### Lyriske stykker
@@ -49,6 +55,9 @@ Griegs "Lyriske stykker," en samling av 66 korte klaververk komponert mellom 186
 ### Andre bemerkelsesverdige verk
 
 Andre betydelige komposisjoner inkluderer "Holberg-suiten," opprinnelig skrevet for piano i 1884 og senere arrangert for strykeorkester, og hans tre fiolinsonater. Holberg-suiten, skrevet for å markere 200-årsjubileet for fødselen til den dansk-norske dramatikeren Ludvig Holberg, demonstrerer Griegs evne til å arbeide innenfor klassiske former mens han opprettholder sin særegne stil.
+
+![Lesesal i Bergen Offentlige Bibliotek](/grieg/gallery/bergen-public-library-sumOjP6kJMI-unsplash.jpg)
+_Foto: Bergen Offentlige Bibliotek (Unsplash)_
 
 ## Troldhaugen og senere år
 

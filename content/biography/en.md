@@ -6,6 +6,9 @@ title: "Biography"
 
 Edvard Hagerup Grieg was a Norwegian composer and pianist, widely regarded as one of the leading figures of the Romantic era. His incorporation of Norwegian folk music into his compositions not only brought international recognition to Norway's musical heritage but also played a pivotal role in shaping the country's national identity.
 
+![The National Library of Norway](/grieg/gallery/the-national-library-of-norway--xdouhDMy_M-unsplash.jpg)
+_Photo: The National Library of Norway (Unsplash)_
+
 ## Early Life and Family Background
 
 Born on June 15, 1843, in Bergen, Norway, Edvard Grieg was the son of Alexander Grieg, a merchant and the British consul in Bergen, and Gesine Judithe Hagerup, a music teacher. The Grieg family traced its roots to Scotland; the original surname "Greig" was associated with the Scottish Clan Gregor. After the Battle of Culloden in 1746, Grieg's great-grandfather, Alexander Greig, emigrated and eventually settled in Bergen around 1770.
@@ -40,6 +43,9 @@ That same year as his daughter's death, Grieg composed his renowned Piano Concer
 
 Grieg's collaboration with playwright Henrik Ibsen led to the creation of the incidental music for "Peer Gynt" in 1875, which includes the famous pieces "In the Hall of the Mountain King" and "Morning Mood." Despite his initial reservations about the music's overt nationalism, the suite became one of his most celebrated works and helped establish Grieg's international reputation.
 
+![Bergen Public Library](/grieg/gallery/bergen-public-library-cxIBmwCkMLA-unsplash.jpg)
+_Photo: Bergen Public Library (Unsplash)_
+
 The Peer Gynt suites, extracted from the incidental music, became immensely popular and are among the most frequently performed orchestral works in the classical repertoire. The music perfectly captures the dramatic and folkloric elements of Ibsen's play while maintaining Grieg's distinctive musical voice.
 
 ### Lyric Pieces
@@ -49,6 +55,9 @@ Grieg's "Lyric Pieces," a collection of 66 short piano works composed between 18
 ### Other Notable Works
 
 Other significant compositions include the "Holberg Suite," originally written for piano in 1884 and later arranged for string orchestra, and his three violin sonatas. The Holberg Suite, written to commemorate the 200th anniversary of the birth of Danish-Norwegian playwright Ludvig Holberg, demonstrates Grieg's ability to work within classical forms while maintaining his distinctive style.
+
+![Bergen Public Library Reading Room](/grieg/gallery/bergen-public-library-sumOjP6kJMI-unsplash.jpg)
+_Photo: Bergen Public Library (Unsplash)_
 
 ## Troldhaugen and Later Years
 

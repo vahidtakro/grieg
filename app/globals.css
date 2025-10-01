@@ -163,6 +163,14 @@ html[data-locale="fa"] .prose h6 {
 .prose blockquote { border-left: 3px solid var(--foreground); padding-left: 0.75rem; margin: 1rem 0; opacity: 0.8; }
 .prose img { max-width: 100%; height: auto; border-radius: 0.375rem; }
 
+/* Markdown figure/caption styling used by lib/markdown.ts */
+.prose figure { margin: 1.25rem auto; text-align: center; }
+.prose figure img { max-width: 50%; height: auto; display: block; margin: 0 auto; border-radius: 0; box-shadow: 0 6px 24px rgba(0,0,0,0.08); }
+[data-theme="light"] .prose figure figcaption { color: rgba(0,0,0,0.55); }
+[data-theme="dark"] .prose figure figcaption { color: rgba(255,255,255,0.7); }
+[data-theme="dark"] .prose figure img { box-shadow: 0 6px 24px rgba(0,0,0,0.4); }
+[data-theme="dark"] .prose figure figcaption { color: rgba(255,255,255,0.7); }
+
 /* Farsi (fa) font and RTL live switch without reload */
 @font-face {
   font-family: "Sahel FD";

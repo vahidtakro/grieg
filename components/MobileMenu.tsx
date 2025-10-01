@@ -82,6 +82,7 @@ export default function MobileMenu() {
               <Link href={`/${locale}/gallery`} onClick={() => setOpen(false)} className={linkClass(`/${locale}/gallery`)}>{t("nav.gallery")}</Link>
               <Link href={`/${locale}/events`} onClick={() => setOpen(false)} className={linkClass(`/${locale}/events`)}>{t("nav.events")}</Link>
               <Link href={`/${locale}/blog`} onClick={() => setOpen(false)} className={linkClass(`/${locale}/blog`)}>{t("nav.blog")}</Link>
+              <Link href={`/${locale}/scores`} onClick={() => setOpen(false)} className={linkClass(`/${locale}/scores`)}>{t("scores.title")}</Link>
             </nav>
             <div className="mt-2 pt-2 border-t border-foreground/10 text-xs text-foreground/70">
               <a href="mailto:contact@grieg.ir" className="hover:underline">contact@grieg.ir</a>

@@ -37,7 +37,11 @@ export function getSlugsIn(dirRelativeToContent: string): string[] {
 export async function parseMarkdownFile(filePath: string): Promise<MarkdownDocument> {
   const raw = fs.readFileSync(filePath, "utf8");
   const { content, data } = matter(raw);
-  const processed = await remark().use(html, { sanitize: false }).process(content);
+
+  // Preprocess custom shortcodes (e.g., Spotify embeds)
+  const replaced = transformCustomEmbeds(content);
+
+  const processed = await remark().use(html, { sanitize: false }).process(replaced);
   let renderedHtml = processed.toString();
   // Enhance images: center, constrain width, and convert following emphasized paragraph to caption
   const figureStyle = 'margin:1.25rem auto;text-align:center;';
@@ -69,6 +73,27 @@ export async function parseMarkdownFile(filePath: string): Promise<MarkdownDocum
   });
   const slug = path.basename(filePath).replace(/\.md$/, "");
   return { slug, content, html: renderedHtml, data: (data || {}) as MarkdownFrontMatter };
+}
+
+function transformCustomEmbeds(src: string): string {
+  let out = src;
+  // Syntax 1: {{spotify:https://open.spotify.com/{type}/{id}}}
+  out = out.replace(
+    /\{\{\s*spotify\s*:\s*(https?:\/\/open\.spotify\.com\/(track|album|playlist)\/([A-Za-z0-9]+)(?:\?[^}]*)?)\s*\}\}/g,
+    (_m, fullUrl: string, type: string, id: string) => {
+      const embedUrl = `https://open.spotify.com/embed/${type}/${id}?utm_source=generator`;
+      return `\n<figure style="margin:1.25rem auto;text-align:center"><iframe style="border-radius:12px;max-width:560px;width:100%;height:152px" src="${embedUrl}" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></figure>\n`;
+    }
+  );
+  // Syntax 2: {{spotify:album:ID}} or track/playlist
+  out = out.replace(
+    /\{\{\s*spotify\s*:\s*(album|track|playlist)\s*:\s*([A-Za-z0-9]+)\s*\}\}/g,
+    (_m, type: string, id: string) => {
+      const embedUrl = `https://open.spotify.com/embed/${type}/${id}?utm_source=generator`;
+      return `\n<figure style="margin:1.25rem auto;text-align:center"><iframe style="border-radius:12px;max-width:560px;width:100%;height:152px" src="${embedUrl}" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></figure>\n`;
+    }
+  );
+  return out;
 }
 
 export async function getMarkdownBySlug(dirRelativeToContent: string, slug: string): Promise<MarkdownDocument | null> {

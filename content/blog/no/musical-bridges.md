@@ -30,11 +30,15 @@ Mashayekhis "Shur" representerer et banebrytende forsøk på å oversette det pe
 
 Verket demonstrerer hvordan persisk klassisk musikk sin vektlegging av melodisk utvikling og modal progresjon kan oversettes til vestlige orkestrale teksturer uten å miste sin essensielle karakter.
 
+{{spotify:https://open.spotify.com/track/4hozfYLop0tp8KuJGnoLvm?si=8e949418b0784855}}
+
 #### "East-West" (1973): En dialog av tradisjoner
 
 I "East-West" skaper Mashayekhi en ekte dialog mellom østlige og vestlige musikalske språk. Dette verket, som Griegs tilnærming til norsk folkemusikk, viser at kulturell fusjon fungerer best når begge tradisjoner forstås dypt og autentisk.
 
 Stykket veksler ikke bare mellom østlige og vestlige seksjoner, men skaper et nytt musikalsk språk som inkorporerer elementer fra begge tradisjoner på en måte som føles naturlig og uunngåelig.
+
+{{spotify:https://open.spotify.com/track/5USEc5vHAHjyXypP3LE7Ak?si=b406a3b71df7471e}}
 
 ### Hafez Nazeri: Overskrider grenser
 
@@ -46,9 +50,13 @@ Nazeris tilnærming speiler Griegs tro på at den mektigste nasjonale musikken s
 
 Denne tilnærmingen, som Griegs, anerkjenner at de mest dype kulturelle uttrykkene er de som ærer sine røtter mens de når mot universell menneskelig opplevelse.
 
+{{spotify:https://open.spotify.com/album/7zcmchJGIM2ECggG9rZNnN?si=Qyos1-ANTm2bRDfMSsqUSQ}}
+
 ### Shahab Paranj: Brobyggeren
 
 Shahab Paranj representerer en yngre generasjon av iranske komponister som har vokst opp med både persiske og vestlige musikalske tradisjoner. Hans arbeid demonstrerer hvordan samtidige iranske komponister kan skape autentisk fusjonsmusikk som ærer begge tradisjoner.
+
+{{spotify:https://open.spotify.com/track/6YzKJmJfGtqDZWO3HdvDfF?si=66c804c4d2e8421d}}
 
 #### Forståelse av begge verdener
 
@@ -81,6 +89,8 @@ Både Grieg og iranske komponister har måttet utvikle nye tekniske tilnærminge
 Samarbeidet mellom Amir Eslami, en klassisk iransk musiker, og Hooshyar Khayam, en vestlig-utdannet pianist, representerer den typen tverrkulturell dialog som Griegs arbeid gjorde mulig. Deres album "All of You" (2010) demonstrerer hvordan musikere fra forskjellige tradisjoner kan skape meningsfulle kunstneriske partnerskap.
 
 Denne typen samarbeid, hvor begge musikere bringer sine autentiske kulturelle bakgrunner til partnerskapet, speiler den typen tverrkulturell forståelse som Griegs musikk har fostret verden over.
+
+{{spotify:https://open.spotify.com/album/0rAUD31GS19bnNG7Cngpni?si=Wg0o5F2ZQIC6qKAT0grX7g}}
 
 ### Den neste generasjonen: Unge iranske komponister
 

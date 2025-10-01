@@ -51,6 +51,11 @@
         "intro": "Photos related to Edvard Grieg and Bergen cultural heritage.",
         "credit": "Credit"
     },
+    "scores": {
+        "title": "Scores & Sheet Music",
+        "intro": "Public-domain scores hosted on IMSLP, linked by work title.",
+        "view": "View on IMSLP"
+    },
 	"notFound": {
 		"title": "Page not found",
 		"back": "Back home"

@@ -51,6 +51,11 @@
         "intro": "Bilder knyttet til Edvard Grieg og Bergens kulturarv.",
         "credit": "Kreditering"
     },
+    "scores": {
+        "title": "Noter og partitur",
+        "intro": "Offentlige partitur på IMSLP, lenker etter verkstittel.",
+        "view": "Se på IMSLP"
+    },
 	"notFound": {
 		"title": "Siden ble ikke funnet",
 		"back": "Tilbake til forsiden"

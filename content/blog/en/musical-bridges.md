@@ -30,11 +30,15 @@ Mashayekhi's "Shur" represents a groundbreaking attempt to translate the Persian
 
 The work demonstrates how Persian classical music's emphasis on melodic development and modal progression can be translated into Western orchestral textures without losing its essential character.
 
+{{spotify:https://open.spotify.com/track/4hozfYLop0tp8KuJGnoLvm?si=8e949418b0784855}}
+
 #### "East-West" (1973): A Dialogue of Traditions
 
 In "East-West," Mashayekhi creates a genuine dialogue between Eastern and Western musical languages. This work, like Grieg's approach to Norwegian folk music, shows that cultural fusion works best when both traditions are understood deeply and authentically.
 
 The piece doesn't simply alternate between Eastern and Western sections, but creates a new musical language that incorporates elements from both traditions in a way that feels natural and inevitable.
+
+{{spotify:https://open.spotify.com/track/5USEc5vHAHjyXypP3LE7Ak?si=b406a3b71df7471e}}
 
 ### Hafez Nazeri: Transcending Boundaries
 
@@ -46,9 +50,13 @@ Nazeri's approach echoes Grieg's belief that the most powerful national music sp
 
 This approach, like Grieg's, recognizes that the most profound cultural expressions are those that honor their roots while reaching toward universal human experience.
 
+{{spotify:https://open.spotify.com/album/7zcmchJGIM2ECggG9rZNnN?si=Qyos1-ANTm2bRDfMSsqUSQ}}
+
 ### Shahab Paranj: The Bridge Builder
 
 Shahab Paranj represents a younger generation of Iranian composers who have grown up with both Persian and Western musical traditions. His work demonstrates how contemporary Iranian composers can create authentic fusion music that honors both traditions.
+
+{{spotify:https://open.spotify.com/track/6YzKJmJfGtqDZWO3HdvDfF?si=66c804c4d2e8421d}}
 
 #### Understanding Both Worlds
 
@@ -81,6 +89,8 @@ Both Grieg and Iranian composers have had to develop new technical approaches to
 The collaboration between Amir Eslami, a classical Iranian musician, and Hooshyar Khayam, a Western-trained pianist, represents the kind of cross-cultural dialogue that Grieg's work made possible. Their album "All of You" (2010) demonstrates how musicians from different traditions can create meaningful artistic partnerships.
 
 This type of collaboration, where both musicians bring their authentic cultural backgrounds to the partnership, mirrors the kind of cross-cultural understanding that Grieg's music has fostered worldwide.
+
+{{spotify:https://open.spotify.com/album/0rAUD31GS19bnNG7Cngpni?si=Wg0o5F2ZQIC6qKAT0grX7g}}
 
 ### The Next Generation: Young Iranian Composers
 

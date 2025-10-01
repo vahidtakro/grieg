@@ -59,6 +59,7 @@ export default function Sidebar() {
           <NavLink href={`/${locale}/gallery`} label={t("nav.gallery")} />
           <NavLink href={`/${locale}/events`} label={t("nav.events")} />
           <NavLink href={`/${locale}/blog`} label={t("nav.blog")} />
+          <NavLink href={`/${locale}/scores`} label={t("scores.title")} />
         </nav>
       </div>
       <div className="px-5 py-4 border-t border-foreground/10 flex items-center gap-2">

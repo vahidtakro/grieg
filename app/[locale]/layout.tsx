@@ -16,17 +16,91 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 const playfair = Playfair_Display({ variable: "--font-display", subsets: ["latin"] });
 
+export const viewport = {
+    themeColor: [
+        { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+        { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+    ],
+};
+
 export async function generateMetadata(): Promise<Metadata> {
     const t = await getTranslations();
     const title = t("site.title");
     const description = t("home.lead");
+    const locale = await getLocale();
+    const ogImage = "/grieg/grieg-og-image.png";
     return {
         title: {
             default: title,
             template: `%s — ${title}`,
         },
         description,
-        icons: { icon: "/favicon.svg" },
+        applicationName: title,
+        authors: [{ name: title }],
+        creator: title,
+        publisher: title,
+        generator: "Next.js + next-intl",
+        keywords: [
+            "Edvard Grieg",
+            "Grieg",
+            "Norwegian composer",
+            "Classical music",
+            "Romantic era",
+            "Peer Gynt",
+            "Piano Concerto",
+        ],
+        category: "music",
+        robots: {
+            index: true,
+            follow: true,
+            nocache: false,
+            googleBot: {
+                index: true,
+                follow: true,
+                noimageindex: false,
+                "max-snippet": -1,
+                "max-image-preview": "large",
+                "max-video-preview": -1,
+            },
+        },
+        icons: {
+            icon: [
+                { url: "/logos/grieg_logo_vector.svg", type: "image/svg+xml" },
+                { url: "/logos/grieg_logo_512.png", sizes: "512x512", type: "image/png" },
+                { url: "/logos/grieg_logo_white.png", sizes: "512x512", type: "image/png" },
+            ],
+            apple: [
+                { url: "/logos/grieg_logo_512.png", sizes: "180x180", type: "image/png" },
+            ],
+            shortcut: [
+                { url: "/logos/grieg_logo_vector.svg" },
+            ],
+        },
+        openGraph: {
+            type: "website",
+            title,
+            description,
+            siteName: title,
+            locale,
+            url: `/${locale}`,
+            images: [
+                { url: ogImage, width: 1200, height: 630, alt: title },
+            ],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title,
+            description,
+            images: [ogImage],
+        },
+        alternates: {
+            canonical: `/${locale}`,
+            languages: {
+                en: "/en",
+                fa: "/fa",
+                no: "/no",
+            },
+        },
     };
 }
 
@@ -41,7 +115,10 @@ export default async function LocaleLayout({ children }: { children: React.React
 
                 <div className="relative h-dvh flex flex-col overflow-y-auto">
                     <div className="md:hidden sticky top-0 z-20 flex items-center justify-between px-4 py-3 border-b border-foreground/10 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-                        <Link href={`/${locale}`} className="text-lg font-semibold" style={{ fontFamily: locale === "fa" ? '"Sahel FD", var(--font-display)' : 'var(--font-display)' }}>{t("site.title")}</Link>
+                        <Link href={`/${locale}`} className="text-lg font-semibold flex items-center gap-2">
+                            <img src="/logos/grieg_logo_vector.svg" alt="Grieg logo" className="h-6 w-6" />
+                            <span style={{ fontFamily: locale === "fa" ? '"Sahel FD", var(--font-display)' : 'var(--font-display)' }}>{t("site.title")}</span>
+                        </Link>
                         <div className="flex items-center gap-2">
                             <LanguageSwitcher />
                             <ThemeToggle />

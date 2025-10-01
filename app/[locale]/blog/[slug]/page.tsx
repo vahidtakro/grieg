@@ -49,13 +49,54 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const post = await getMarkdownBySlug(`blog/${locale}`, slug);
     const baseTitle = t("blog.title");
     if (!post) {
-        return { title: `${baseTitle}` };
+        return {
+            title: `${baseTitle}`,
+            description: t("home.lead"),
+            openGraph: {
+                type: "article",
+                title: baseTitle,
+                description: t("home.lead"),
+                siteName: t("site.title"),
+                locale,
+                url: `/${locale}/blog`,
+                images: [{ url: "/grieg/grieg-og-image.png", width: 1200, height: 630, alt: t("site.title") }],
+            },
+            twitter: {
+                card: "summary_large_image",
+                title: baseTitle,
+                description: t("home.lead"),
+                images: ["/grieg/grieg-og-image.png"],
+            },
+            alternates: {
+                canonical: `/${locale}/blog`,
+                languages: { en: "/en/blog", fa: "/fa/blog", no: "/no/blog" },
+            },
+        };
     }
     const title = post.data.title ? `${post.data.title} — ${baseTitle}` : baseTitle;
     const description = (post.data.excerpt as string) || t("home.lead");
     return {
         title,
         description,
+        openGraph: {
+            type: "article",
+            title,
+            description,
+            siteName: t("site.title"),
+            locale,
+            url: `/${locale}/blog/${slug}`,
+            images: [{ url: "/grieg/grieg-og-image.png", width: 1200, height: 630, alt: title }],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title,
+            description,
+            images: ["/grieg/grieg-og-image.png"],
+        },
+        alternates: {
+            canonical: `/${locale}/blog/${slug}`,
+            languages: { en: `/en/blog/${slug}`, fa: `/fa/blog/${slug}`, no: `/no/blog/${slug}` },
+        },
     };
 }
 

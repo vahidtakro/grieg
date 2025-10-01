@@ -6,7 +6,7 @@ excerpt: "Analyse av de overraskende musikalske forbindelsene mellom Edvard Grie
 
 # Lydlikheter: Grieg og persisk tradisjonell musikk
 
-Som en iransk musiker som utforsker Edvard Griegs verk, har jeg blitt slått av noe bemerkelsesverdig: det er øyeblikk i Griegs musikk som høres nesten kjent ut for mine ører, som om de kunne ha oppstått fra den rike tradisjonen av persisk klassisk musikk. Dette er ikke bare tilfeldighet eller ønsketenkning—det er ekte strukturelle og modale likheter som skaper disse øyeblikkene av gjenkjenning.
+Som en iransk som utforsker Edvard Griegs verk, har jeg blitt slått av noe bemerkelsesverdig: det er øyeblikk i Griegs musikk som høres nesten kjent ut for mine ører, som om de kunne ha oppstått fra den rike tradisjonen av persisk klassisk musikk. Dette er ikke bare tilfeldighet eller ønsketenkning—det er ekte strukturelle og modale likheter som skaper disse øyeblikkene av gjenkjenning.
 
 ## Den modale forbindelsen: Et delt musikalsk språk
 
@@ -106,7 +106,7 @@ Likhetene mellom Griegs musikk og persisk tradisjonell musikk avslører noe dypt
 
 Disse likhetene antyder at det er visse grunnleggende aspekter av menneskelig musikalsk opplevelse som overskrider kulturelle grenser. Den modale tilnærmingen til musikk, kunsten med melodisk ornamentering og evnen til å skape emosjonelle reiser gjennom lyd synes å være universelle menneskelige kapasiteter som forskjellige kulturer har utviklet på sine egne unike måter.
 
-Som en iransk musiker som utforsker Griegs musikk, finner jeg disse likhetene ikke bare intellektuelt fascinerende, men emosjonelt meningsfulle. De minner meg om at musikk til syvende og sist er et universelt språk, selv når det snakker med aksenten til en bestemt kultur.
+Som en iransk som utforsker Griegs musikk, finner jeg disse likhetene ikke bare intellektuelt fascinerende, men emosjonelt meningsfulle. De minner meg om at musikk til syvende og sist er et universelt språk, selv når det snakker med aksenten til en bestemt kultur.
 
 Det faktum at Griegs norske modale språk kan resonere med ører vant til persisk tradisjonell musikk antyder at det er dypere forbindelser mellom forskjellige musikalske kulturer enn vi kanskje først antar. Disse forbindelsene tilbyr håp for en mer tilkoblet og forstående musikalsk verden, hvor forskjellige tradisjoner kan lære av og inspirere hverandre.
 

@@ -22,8 +22,20 @@ export const metadata: Metadata = {
   title: "Edvard Grieg — Composer",
   description:
     "A minimal website dedicated to the life and works of Norwegian composer Edvard Grieg.",
-  metadataBase: new URL("https://example.com"),
-  icons: { icon: "/favicon.svg" },
+  metadataBase: new URL("https://grieg.ir"),
+  icons: {
+    icon: [
+      { url: "/logos/grieg_logo_vector.svg", type: "image/svg+xml" },
+      { url: "/logos/grieg_logo_512.png", sizes: "512x512", type: "image/png" },
+      { url: "/logos/grieg_logo_white.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/logos/grieg_logo_512.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: [
+      { url: "/logos/grieg_logo_vector.svg" },
+    ],
+  },
 };
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

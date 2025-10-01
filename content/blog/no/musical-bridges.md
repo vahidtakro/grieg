@@ -6,7 +6,7 @@ excerpt: "Utforskning av hvordan iranske komponister har skapt broer mellom pers
 
 # Musikalske broer: Iranske komponister og Grieg-forbindelsen
 
-Som en iransk musiker som er dypt fascinert av Edvard Griegs tilnærming til å integrere nasjonale folkeelementer i klassisk musikk, har jeg ofte undret meg over parallellene mellom hans arbeid og iranske komponisters forsøk på å bygge broer mellom persiske og vestlige musikalske tradisjoner. Selv om direkte dokumentasjon av Griegs påvirkning på iranske komponister kan være begrenset, har ånden i hans nasjonalistiske tilnærming—autentisk inkorporering av folkeelementer i sofistikerte klassiske former—funnet bemerkelsesverdige ekkoer i arbeidet til flere banebrytende iranske musikere.
+Som en iransk som er dypt fascinert av Edvard Griegs tilnærming til å integrere nasjonale folkeelementer i klassisk musikk, har jeg ofte undret meg over parallellene mellom hans arbeid og iranske komponisters forsøk på å bygge broer mellom persiske og vestlige musikalske tradisjoner. Selv om direkte dokumentasjon av Griegs påvirkning på iranske komponister kan være begrenset, har ånden i hans nasjonalistiske tilnærming—autentisk inkorporering av folkeelementer i sofistikerte klassiske former—funnet bemerkelsesverdige ekkoer i arbeidet til flere banebrytende iranske musikere.
 
 ## Grieg-modellen: Nasjonalisme gjennom autentisitet
 

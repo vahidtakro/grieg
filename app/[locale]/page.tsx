@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getLocale } from "next-intl/server";
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getAllMarkdown } from "@/lib/markdown";
 
@@ -96,9 +97,30 @@ export async function generateMetadata(): Promise<Metadata> {
 	const t = await getTranslations();
 	const title = t("site.title");
 	const description = t("home.lead");
+    const ogImage = "/grieg/grieg-og-image.png";
+    const locale = await getLocale();
 	return {
 		title,
 		description,
+		openGraph: {
+			type: "website",
+			title,
+			description,
+			siteName: title,
+			locale,
+			url: `/${locale}`,
+			images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
+		},
+		twitter: {
+			card: "summary_large_image",
+			title,
+			description,
+			images: [ogImage],
+		},
+		alternates: {
+			canonical: `/${locale}`,
+			languages: { en: "/en", fa: "/fa", no: "/no" },
+		},
 	};
 }
 

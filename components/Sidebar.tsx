@@ -42,7 +42,10 @@ export default function Sidebar() {
         <div className="absolute inset-0 overlay-side" />
         <div className="absolute right-0 top-0 h-full w-[6px] bg-[--accent] opacity-60" />
         <div className="relative text-xl font-semibold tracking-tight">
-          <Link href={`/${locale}`}>{t("site.title")}</Link>
+          <Link href={`/${locale}`} className="flex items-center gap-2">
+            <img src="/logos/grieg_logo_vector.svg" alt="Grieg logo" className="h-6 w-6" />
+            <span style={{ fontFamily: locale === 'fa' ? '"Sahel FD", var(--font-display)' : 'var(--font-display)' }}>{t("site.title")}</span>
+          </Link>
         </div>
         <div className="relative mt-2 text-xs text-foreground/70">{t("site.tagline")}</div>
       </div>
@@ -59,6 +62,7 @@ export default function Sidebar() {
       <div className="px-5 py-4 border-t border-foreground/10 flex items-center gap-2">
         <LanguageSwitcher />
         <ThemeToggle />
+        <a href="mailto:contact@grieg.ir" className="ml-auto text-xs text-foreground/70 hover:underline">contact@grieg.ir</a>
       </div>
     </aside>
   );

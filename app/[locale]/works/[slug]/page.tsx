@@ -42,6 +42,25 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     return {
         title: `${work.data.title || work.slug} — ${t("nav.works")}`,
         description: (work.data.excerpt as string) || t("home.lead"),
+        openGraph: {
+            type: "article",
+            title: `${work.data.title || work.slug} — ${t("nav.works")}`,
+            description: (work.data.excerpt as string) || t("home.lead"),
+            siteName: t("site.title"),
+            locale,
+            url: `/${locale}/works/${slug}`,
+            images: [{ url: "/grieg/grieg-og-image.png", width: 1200, height: 630, alt: work.data.title || work.slug }],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: `${work.data.title || work.slug} — ${t("nav.works")}`,
+            description: (work.data.excerpt as string) || t("home.lead"),
+            images: ["/grieg/grieg-og-image.png"],
+        },
+        alternates: {
+            canonical: `/${locale}/works/${slug}`,
+            languages: { en: `/en/works/${slug}`, fa: `/fa/works/${slug}`, no: `/no/works/${slug}` },
+        },
     };
 }
 

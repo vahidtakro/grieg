@@ -61,7 +61,10 @@ export default function MobileMenu() {
         >
           <div className="p-4">
             <div className="flex items-center justify-between">
-              <div className="text-lg font-semibold" style={{ fontFamily: locale === 'fa' ? '"Sahel FD", var(--font-display)' : 'var(--font-display)' }}>{t("site.title")}</div>
+              <div className="flex items-center gap-2">
+                <img src="/logos/grieg_logo_vector.svg" alt="Grieg logo" className="h-6 w-6" />
+                <div className="text-lg font-semibold" style={{ fontFamily: locale === 'fa' ? '"Sahel FD", var(--font-display)' : 'var(--font-display)' }}>{t("site.title")}</div>
+              </div>
               <button
                 type="button"
                 aria-label="Close menu"
@@ -78,6 +81,9 @@ export default function MobileMenu() {
               <Link href={`/${locale}/listen`} onClick={() => setOpen(false)} className={linkClass(`/${locale}/listen`)}>{t("nav.listen")}</Link>
               <Link href={`/${locale}/blog`} onClick={() => setOpen(false)} className={linkClass(`/${locale}/blog`)}>{t("nav.blog")}</Link>
             </nav>
+            <div className="mt-2 pt-2 border-t border-foreground/10 text-xs text-foreground/70">
+              <a href="mailto:contact@grieg.ir" className="hover:underline">contact@grieg.ir</a>
+            </div>
           </div>
         </div>
       </div>

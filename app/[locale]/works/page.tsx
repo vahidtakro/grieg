@@ -34,9 +34,30 @@ export default async function WorksPage({ params }: { params: Promise<{ locale: 
 
 export async function generateMetadata(): Promise<Metadata> {
     const t = await getTranslations();
+    const ogImage = "/grieg/grieg-og-image.png";
+    const locale = (await import("next-intl/server")).getLocale ? await (await import("next-intl/server")).getLocale() : "en";
     return {
         title: t("nav.works"),
         description: t("home.lead"),
+        openGraph: {
+            type: "website",
+            title: t("nav.works"),
+            description: t("home.lead"),
+            siteName: t("site.title"),
+            locale: typeof locale === "string" ? locale : "en",
+            url: `/${typeof locale === "string" ? locale : "en"}/works`,
+            images: [{ url: ogImage, width: 1200, height: 630, alt: t("site.title") }],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: t("nav.works"),
+            description: t("home.lead"),
+            images: [ogImage],
+        },
+        alternates: {
+            canonical: `/${typeof locale === "string" ? locale : "en"}/works`,
+            languages: { en: "/en/works", fa: "/fa/works", no: "/no/works" },
+        },
     };
 }
 

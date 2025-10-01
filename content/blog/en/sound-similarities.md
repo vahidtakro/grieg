@@ -6,7 +6,7 @@ excerpt: "Analyzing the surprising musical connections between Edvard Grieg's mo
 
 # Similarities in Sound: Grieg and Persian Traditional Music
 
-As an Iranian musician exploring the works of Edvard Grieg, I've been struck by something remarkable: there are moments in Grieg's music that sound almost familiar to my ears, as if they could have emerged from the rich tradition of Persian classical music. This isn't mere coincidence or wishful thinking—there are genuine structural and modal similarities that create these moments of recognition.
+As an Iranian exploring the works of Edvard Grieg, I've been struck by something remarkable: there are moments in Grieg's music that sound almost familiar to my ears, as if they could have emerged from the rich tradition of Persian classical music. This isn't mere coincidence or wishful thinking—there are genuine structural and modal similarities that create these moments of recognition.
 
 ## The Modal Connection: A Shared Musical Language
 
@@ -106,7 +106,7 @@ The similarities between Grieg's music and Persian traditional music reveal some
 
 These similarities suggest that there are certain fundamental aspects of human musical experience that transcend cultural boundaries. The modal approach to music, the art of melodic ornamentation, and the ability to create emotional journeys through sound seem to be universal human capacities that different cultures have developed in their own unique ways.
 
-As an Iranian musician exploring Grieg's music, I find these similarities not only intellectually fascinating but emotionally meaningful. They remind me that music is ultimately a universal language, even when it speaks with the accent of a particular culture.
+As an Iranian exploring Grieg's music, I find these similarities not only intellectually fascinating but emotionally meaningful. They remind me that music is ultimately a universal language, even when it speaks with the accent of a particular culture.
 
 The fact that Grieg's Norwegian modal language can resonate with ears accustomed to Persian traditional music suggests that there are deeper connections between different musical cultures than we might initially assume. These connections offer hope for a more connected and understanding musical world, where different traditions can learn from and inspire each other.
 

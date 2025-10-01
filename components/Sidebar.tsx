@@ -56,6 +56,7 @@ export default function Sidebar() {
           <NavLink href={`/${locale}/works`} label={t("nav.works")} />
           <NavLink href={`/${locale}/biography`} label={t("nav.biography")} />
           <NavLink href={`/${locale}/listen`} label={t("nav.listen")} />
+          <NavLink href={`/${locale}/events`} label={t("nav.events")} />
           <NavLink href={`/${locale}/blog`} label={t("nav.blog")} />
         </nav>
       </div>

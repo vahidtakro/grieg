@@ -4,8 +4,6 @@ date: "2024-01-15"
 excerpt: "Analyzing the surprising musical connections between Edvard Grieg's modal language and Persian traditional music, exploring how different cultures can share similar musical DNA."
 ---
 
-# Similarities in Sound: Grieg and Persian Traditional Music
-
 As an Iranian exploring the works of Edvard Grieg, I've been struck by something remarkable: there are moments in Grieg's music that sound almost familiar to my ears, as if they could have emerged from the rich tradition of Persian classical music. This isn't mere coincidence or wishful thinking—there are genuine structural and modal similarities that create these moments of recognition.
 
 ## The Modal Connection: A Shared Musical Language

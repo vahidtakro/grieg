@@ -4,8 +4,6 @@ date: "2024-01-15"
 excerpt: "Utforskning av hvordan Edvard Griegs dype forbindelse til norsk natur speiler det dype forholdet mellom iranske poeter og deres naturlige verden, og avslører universelle sannheter om menneskehetens bånd til jorden."
 ---
 
-# Naturforbindelsen: Griegs norske landskap og iranske poetiske tradisjoner
-
 Stående foran de majestetiske fjordene i Vest-Norge, hvor fjellene stuper dramatisk ned i de dype blå vannene, finner jeg meg selv transportert til de samme landskapene som inspirerte Edvard Griegs mest dype musikalske uttrykk. Som iraner kan jeg ikke unngå å trekke paralleller mellom disse norske utsiktene og de naturlige bildene som har formet persisk poesi i over et årtusen—rosengardene i Shiraz, ørkenoasene, de snødekte toppene i Alborz-fjellene.
 
 ## Det norske landskapet: Griegs musikalske lerret

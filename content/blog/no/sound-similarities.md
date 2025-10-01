@@ -4,8 +4,6 @@ date: "2024-01-15"
 excerpt: "Analyse av de overraskende musikalske forbindelsene mellom Edvard Griegs modale språk og persisk tradisjonell musikk, utforskning av hvordan forskjellige kulturer kan dele lignende musikalsk DNA."
 ---
 
-# Lydlikheter: Grieg og persisk tradisjonell musikk
-
 Som en iransk som utforsker Edvard Griegs verk, har jeg blitt slått av noe bemerkelsesverdig: det er øyeblikk i Griegs musikk som høres nesten kjent ut for mine ører, som om de kunne ha oppstått fra den rike tradisjonen av persisk klassisk musikk. Dette er ikke bare tilfeldighet eller ønsketenkning—det er ekte strukturelle og modale likheter som skaper disse øyeblikkene av gjenkjenning.
 
 ## Den modale forbindelsen: Et delt musikalsk språk

@@ -4,7 +4,8 @@
 		"works": "Works",
 		"biography": "Biography",
 		"listen": "Listen",
-		"blog": "Blog"
+		"blog": "Blog",
+		"events": "Events"
 	},
 	"site": {
 		"title": "Edvard Grieg",
@@ -37,6 +38,13 @@
 	"biography": {
 		"title": "Biography"
 	},
+    "events": {
+        "title": "Events",
+        "intro": "Upcoming and past events related to Edvard Grieg.",
+        "upcoming": "Upcoming",
+        "past": "Past",
+        "noEvents": "No events to show."
+    },
 	"notFound": {
 		"title": "Page not found",
 		"back": "Back home"

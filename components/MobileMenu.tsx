@@ -79,6 +79,7 @@ export default function MobileMenu() {
               <Link href={`/${locale}/works`} onClick={() => setOpen(false)} className={linkClass(`/${locale}/works`)}>{t("nav.works")}</Link>
               <Link href={`/${locale}/biography`} onClick={() => setOpen(false)} className={linkClass(`/${locale}/biography`)}>{t("nav.biography")}</Link>
               <Link href={`/${locale}/listen`} onClick={() => setOpen(false)} className={linkClass(`/${locale}/listen`)}>{t("nav.listen")}</Link>
+              <Link href={`/${locale}/events`} onClick={() => setOpen(false)} className={linkClass(`/${locale}/events`)}>{t("nav.events")}</Link>
               <Link href={`/${locale}/blog`} onClick={() => setOpen(false)} className={linkClass(`/${locale}/blog`)}>{t("nav.blog")}</Link>
             </nav>
             <div className="mt-2 pt-2 border-t border-foreground/10 text-xs text-foreground/70">

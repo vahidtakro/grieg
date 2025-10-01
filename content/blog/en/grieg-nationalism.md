@@ -4,8 +4,6 @@ date: "2024-01-15"
 excerpt: "Exploring how Edvard Grieg used music to define Norwegian national identity, and the fascinating parallels with Iranian musical nationalism."
 ---
 
-# Grieg & Nationalism: Music as a Bridge Between Cultures
-
 As an Iranian exploring the life and works of Edvard Grieg, I find myself drawn to a particularly fascinating aspect of his legacy: how he used music to help define and strengthen Norwegian national identity. This journey of musical nationalism resonates deeply with my own cultural background, where music has played an equally vital role in shaping Iranian identity throughout history.
 
 ## The Norwegian Context: A Nation in Search of Its Voice

@@ -9,7 +9,12 @@ import { useTranslations } from "next-intl";
 
 function NavLink({ href, label }: { href: string; label: string }) {
   const pathname = usePathname();
-  const isActive = pathname === href || (href !== "/" && pathname?.startsWith(href));
+  // Treat locale root (e.g., /en, /fa) as active only on exact match.
+  // For section links (e.g., /en/blog), mark active on exact match or when a subpath is active.
+  const isRoot = !href.includes("/", 1); // e.g., "/en" has no further slash after index 0
+  const isActive = isRoot
+    ? pathname === href
+    : pathname === href || pathname?.startsWith(href + "/");
   return (
     <Link
       href={href}

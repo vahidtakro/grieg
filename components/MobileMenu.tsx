@@ -13,6 +13,16 @@ export default function MobileMenu() {
   const pathname = usePathname() || "/en";
   const currentLocale = (pathname.split("/").filter(Boolean)[0] ?? "en") as string;
   const locale = locales.includes(currentLocale as typeof locales[number]) ? (currentLocale as typeof locales[number]) : "en";
+  
+  function linkClass(href: string) {
+    const isRoot = !href.includes("/", 1);
+    const isActive = isRoot
+      ? pathname === href
+      : pathname === href || pathname.startsWith(href + "/");
+    return (
+      "px-3 py-2 rounded-md " + (isActive ? "bg-foreground text-background" : "hover:bg-foreground/10")
+    );
+  }
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -62,11 +72,11 @@ export default function MobileMenu() {
               </button>
             </div>
             <nav className="mt-4 grid gap-2 text-sm pb-3">
-              <Link href={`/${locale}`} ref={firstLinkRef} onClick={() => setOpen(false)} className="px-3 py-2 rounded-md hover:bg-foreground/10">{t("nav.home")}</Link>
-              <Link href={`/${locale}/works`} onClick={() => setOpen(false)} className="px-3 py-2 rounded-md hover:bg-foreground/10">{t("nav.works")}</Link>
-              <Link href={`/${locale}/biography`} onClick={() => setOpen(false)} className="px-3 py-2 rounded-md hover:bg-foreground/10">{t("nav.biography")}</Link>
-              <Link href={`/${locale}/listen`} onClick={() => setOpen(false)} className="px-3 py-2 rounded-md hover:bg-foreground/10">{t("nav.listen")}</Link>
-              <Link href={`/${locale}/blog`} onClick={() => setOpen(false)} className="px-3 py-2 rounded-md hover:bg-foreground/10">{t("nav.blog")}</Link>
+              <Link href={`/${locale}`} ref={firstLinkRef} onClick={() => setOpen(false)} className={linkClass(`/${locale}`)}>{t("nav.home")}</Link>
+              <Link href={`/${locale}/works`} onClick={() => setOpen(false)} className={linkClass(`/${locale}/works`)}>{t("nav.works")}</Link>
+              <Link href={`/${locale}/biography`} onClick={() => setOpen(false)} className={linkClass(`/${locale}/biography`)}>{t("nav.biography")}</Link>
+              <Link href={`/${locale}/listen`} onClick={() => setOpen(false)} className={linkClass(`/${locale}/listen`)}>{t("nav.listen")}</Link>
+              <Link href={`/${locale}/blog`} onClick={() => setOpen(false)} className={linkClass(`/${locale}/blog`)}>{t("nav.blog")}</Link>
             </nav>
           </div>
         </div>

@@ -14,6 +14,9 @@ The Norwegian fjords, with their towering cliffs and deep, silent waters, provid
 
 The fjords' unique acoustics, where sound travels great distances across the water, seem to have influenced Grieg's understanding of musical space and resonance. His use of sustained notes and gradual crescendos mirrors the way sound behaves in these natural amphitheaters.
 
+![Lysefjord Norway](/images/goysa-gard-lysefjord-norway-hotel-lysefjord-vahidtakro-com-1.webp)
+_Photo: Lysefjord Norway by Vahid Takro_
+
 ### The Mountains: Peaks of Musical Expression
 
 Norway's mountain ranges, particularly the Jotunheimen and Rondane, with their snow-capped peaks and alpine meadows, find their musical equivalent in Grieg's soaring melodies and dramatic contrasts. The way he builds from quiet, contemplative passages to powerful climaxes reflects the experience of climbing these peaks—the gradual ascent, the moments of rest, and the final triumphant view from the summit.
@@ -65,6 +68,9 @@ Yet even in this wild expression, there's a sense of respect and awe for nature'
 Many of Grieg's *Lyric Pieces* function as musical nature studies, each capturing a different aspect of the Norwegian landscape. "Butterfly" flits with the lightness of a summer breeze, while "To Spring" celebrates the renewal of life after the long winter.
 
 These pieces, like Persian miniature paintings, capture the essence of natural moments in small, perfect forms. Each piece is a complete world, a moment of natural beauty frozen in musical time.
+
+![Edvard Grieg's house view](/images/grieg-house-view-vahidtakro.jpg)
+_Photo: Edvard Grieg's house view by Vahid Takro_
 
 ## Persian Poetic Nature: The Garden of Words
 
@@ -119,6 +125,9 @@ Grieg's music, with its deep connection to Norwegian nature, can serve as a remi
 Both cultures have used their natural heritage to define their cultural identity. Norwegian music and Iranian poetry both draw their unique character from their relationship with their respective natural environments.
 
 This suggests that cultural diversity is not just about different languages or customs, but about different ways of relating to and understanding the natural world.
+
+![Edvard Grieg's house view](/images/grieg-house-view-vahidtakro-2.jpg)
+_Photo: Edvard Grieg's house view by Vahid Takro_
 
 ## Conclusion: A Shared Earth, A Shared Humanity
 

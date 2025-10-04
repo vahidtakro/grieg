@@ -14,6 +14,9 @@ De norske fjordene, med sine tårnhøye klipper og dype, stille vann, ga Grieg e
 
 Fjordenes unike akustikk, hvor lyd reiser store avstander over vannet, synes å ha påvirket Griegs forståelse av musikalsk rom og resonans. Hans bruk av vedvarende toner og gradvise crescendoer speiler måten lyd oppfører seg i disse naturlige amfiteatrene.
 
+![Lysefjorden i Norge](/images/goysa-gard-lysefjord-norway-hotel-lysefjord-vahidtakro-com-1.webp)
+_Foto: Lysefjorden i Norge av Vahid Takro_
+
 ### Fjellene: Topper av musikalsk uttrykk
 
 Norges fjellkjeder, spesielt Jotunheimen og Rondane, med sine snødekte topper og alpine enger, finner sin musikalske ekvivalent i Griegs sværende melodier og dramatiske kontraster. Måten han bygger fra stille, kontemplative passasjer til mektige klimaks reflekterer opplevelsen av å klatre disse toppene—den gradvise stigningen, hvileøyeblikkene, og den endelige triumferende utsikten fra toppen.
@@ -65,6 +68,9 @@ Men selv i dette ville uttrykket er det en følelse av respekt og ærefrykt for 
 Mange av Griegs *Lyriske stykker* fungerer som musikalske naturstudier, hver fanger et annet aspekt av det norske landskapet. "Sommerfugl" flakser med sommerbrisens letthet, mens "Til våren" feirer livets fornyelse etter den lange vinteren.
 
 Disse stykkene, som persiske miniatyrmalerier, fanger essensen av naturlige øyeblikk i små, perfekte former. Hvert stykke er en komplett verden, et øyeblikk av naturlig skjønnhet frosset i musikalsk tid.
+
+![Utsikt fra Edvard Griegs hus](/images/grieg-house-view-vahidtakro.jpg)
+_Foto: Utsikt fra Edvard Griegs hus av Vahid Takro_
 
 ## Persisk poetisk natur: Hagens ord
 
@@ -119,6 +125,9 @@ Griegs musikk, med sin dype forbindelse til norsk natur, kan tjene som en påmin
 Begge kulturer har brukt sin naturlige arv til å definere sin kulturelle identitet. Norsk musikk og persisk poesi henter begge sin unike karakter fra sitt forhold til sine respektive naturlige miljøer.
 
 Dette antyder at kulturell mangfold ikke bare handler om forskjellige språk eller skikker, men om forskjellige måter å forholde seg til og forstå den naturlige verden på.
+
+![Utsikt fra Edvard Griegs hus](/images/grieg-house-view-vahidtakro-2.jpg)
+_Foto: Utsikt fra Edvard Griegs hus av Vahid Takro_
 
 ## Konklusjon: En delt jord, en delt menneskehet
 

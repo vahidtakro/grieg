@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { getLocale } from "next-intl/server";
 import { getAllMarkdown } from "@/lib/markdown";
 import { getTranslations } from "next-intl/server";
+import { siteConfig } from "@/src/config/site";
 
 export default async function WorksPage({ params }: { params: Promise<{ locale: string }> }) {
 	const t = await getTranslations();
@@ -56,8 +57,8 @@ export async function generateMetadata(): Promise<Metadata> {
             images: [ogImage],
         },
         alternates: {
-            canonical: `/${locale}/works`,
-            languages: { en: "/en/works", fa: "/fa/works", no: "/no/works" },
+            canonical: `${siteConfig.baseUrl}/${locale}/works`,
+            languages: { en: `${siteConfig.baseUrl}/en/works`, fa: `${siteConfig.baseUrl}/fa/works`, no: `${siteConfig.baseUrl}/no/works` },
         },
     };
 }

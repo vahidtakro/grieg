@@ -10,6 +10,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import DocumentAttributes from "@/components/DocumentAttributes";
 import MobileMenu from "@/components/MobileMenu";
+import { siteConfig } from "@/src/config/site";
 import "./globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -94,11 +95,11 @@ export async function generateMetadata(): Promise<Metadata> {
             images: [ogImage],
         },
         alternates: {
-            canonical: `/${locale}`,
+            canonical: `${siteConfig.baseUrl}/${locale}`,
             languages: {
-                en: "/en",
-                fa: "/fa",
-                no: "/no",
+                en: `${siteConfig.baseUrl}/en`,
+                fa: `${siteConfig.baseUrl}/fa`,
+                no: `${siteConfig.baseUrl}/no`,
             },
         },
     };

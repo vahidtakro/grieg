@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { locales } from "../../../../src/i18n/config";
 import { getTranslations } from "next-intl/server";
+import { siteConfig } from "@/src/config/site";
 
 export const dynamic = "force-dynamic";
 
@@ -68,8 +69,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
                 images: ["/grieg/grieg-og-image.png"],
             },
             alternates: {
-                canonical: `/${locale}/blog`,
-                languages: { en: "/en/blog", fa: "/fa/blog", no: "/no/blog" },
+                canonical: `${siteConfig.baseUrl}/${locale}/blog`,
+                languages: { en: `${siteConfig.baseUrl}/en/blog`, fa: `${siteConfig.baseUrl}/fa/blog`, no: `${siteConfig.baseUrl}/no/blog` },
             },
         };
     }
@@ -94,8 +95,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             images: ["/grieg/grieg-og-image.png"],
         },
         alternates: {
-            canonical: `/${locale}/blog/${slug}`,
-            languages: { en: `/en/blog/${slug}`, fa: `/fa/blog/${slug}`, no: `/no/blog/${slug}` },
+            canonical: `${siteConfig.baseUrl}/${locale}/blog/${slug}`,
+            languages: { en: `${siteConfig.baseUrl}/en/blog/${slug}`, fa: `${siteConfig.baseUrl}/fa/blog/${slug}`, no: `${siteConfig.baseUrl}/no/blog/${slug}` },
         },
     };
 }

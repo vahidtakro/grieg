@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
 import GalleryLightbox, { GalleryItem } from "@/components/GalleryLightbox";
+import { siteConfig } from "@/src/config/site";
 
 const ITEMS: GalleryItem[] = [
   { src: "/grieg/gallery/bergen-public-library-cxIBmwCkMLA-unsplash.jpg", width: 1600, height: 1067, alt: "Bergen Public Library", credit: "Bergen Public Library (Unsplash)" },
@@ -46,8 +47,8 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [ogImage],
     },
     alternates: {
-      canonical: `/${locale}/gallery`,
-      languages: { en: "/en/gallery", fa: "/fa/gallery", no: "/no/gallery" },
+      canonical: `${siteConfig.baseUrl}/${locale}/gallery`,
+      languages: { en: `${siteConfig.baseUrl}/en/gallery`, fa: `${siteConfig.baseUrl}/fa/gallery`, no: `${siteConfig.baseUrl}/no/gallery` },
     },
   };
 }

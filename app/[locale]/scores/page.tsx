@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
+import { siteConfig } from "@/src/config/site";
 
 type IMSLPWork = {
   title: string;
@@ -90,8 +91,8 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [ogImage],
     },
     alternates: {
-      canonical: `/${locale}/scores`,
-      languages: { en: "/en/scores", fa: "/fa/scores", no: "/no/scores" },
+      canonical: `${siteConfig.baseUrl}/${locale}/scores`,
+      languages: { en: `${siteConfig.baseUrl}/en/scores`, fa: `${siteConfig.baseUrl}/fa/scores`, no: `${siteConfig.baseUrl}/no/scores` },
     },
   };
 }

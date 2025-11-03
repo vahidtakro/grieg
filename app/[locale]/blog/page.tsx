@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { getLocale } from "next-intl/server";
 import { getAllMarkdown } from "@/lib/markdown";
 import { getTranslations } from "next-intl/server";
+import { siteConfig } from "@/src/config/site";
 
 export const dynamic = "force-dynamic";
 
@@ -55,8 +56,8 @@ export async function generateMetadata(): Promise<Metadata> {
             images: [ogImage],
         },
         alternates: {
-            canonical: `/${locale}/blog`,
-            languages: { en: "/en/blog", fa: "/fa/blog", no: "/no/blog" },
+            canonical: `${siteConfig.baseUrl}/${locale}/blog`,
+            languages: { en: `${siteConfig.baseUrl}/en/blog`, fa: `${siteConfig.baseUrl}/fa/blog`, no: `${siteConfig.baseUrl}/no/blog` },
         },
     };
 }

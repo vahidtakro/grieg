@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next";
 import { locales } from "@/src/i18n/config";
 import { getAllMarkdown } from "@/lib/markdown";
+import { siteConfig } from "@/src/config/site";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://grieg.ir";
+  const baseUrl = siteConfig.baseUrl;
 
   const staticByLocale = locales.flatMap((loc) => {
     const now = new Date().toISOString();

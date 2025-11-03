@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
+import { siteConfig } from "@/src/config/site";
 
 type EventItem = {
   id: string;
@@ -426,8 +427,8 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [ogImage],
     },
     alternates: {
-      canonical: `/${locale}/events`,
-      languages: { en: "/en/events", fa: "/fa/events", no: "/no/events" },
+      canonical: `${siteConfig.baseUrl}/${locale}/events`,
+      languages: { en: `${siteConfig.baseUrl}/en/events`, fa: `${siteConfig.baseUrl}/fa/events`, no: `${siteConfig.baseUrl}/no/events` },
     },
   };
 }

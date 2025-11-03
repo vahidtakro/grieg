@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import { getLocale } from "next-intl/server";
 import AudioPlayer from "@/components/AudioPlayer";
+import { siteConfig } from "@/src/config/site";
 
 type ArchiveAudioItem = {
 	identifier: string;
@@ -157,8 +158,8 @@ export async function generateMetadata(): Promise<Metadata> {
             images: [ogImage],
         },
         alternates: {
-            canonical: `/${locale}/listen`,
-            languages: { en: "/en/listen", fa: "/fa/listen", no: "/no/listen" },
+            canonical: `${siteConfig.baseUrl}/${locale}/listen`,
+            languages: { en: `${siteConfig.baseUrl}/en/listen`, fa: `${siteConfig.baseUrl}/fa/listen`, no: `${siteConfig.baseUrl}/no/listen` },
         },
     };
 }

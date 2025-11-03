@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getMarkdownBySlug, getAllMarkdown } from "@/lib/markdown";
 import { getTranslations } from "next-intl/server";
 import { locales } from "../../../../src/i18n/config";
+import { siteConfig } from "@/src/config/site";
 
 type Params = { slug: string; locale: string };
 
@@ -58,8 +59,8 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
             images: ["/grieg/grieg-og-image.png"],
         },
         alternates: {
-            canonical: `/${locale}/works/${slug}`,
-            languages: { en: `/en/works/${slug}`, fa: `/fa/works/${slug}`, no: `/no/works/${slug}` },
+            canonical: `${siteConfig.baseUrl}/${locale}/works/${slug}`,
+            languages: { en: `${siteConfig.baseUrl}/en/works/${slug}`, fa: `${siteConfig.baseUrl}/fa/works/${slug}`, no: `${siteConfig.baseUrl}/no/works/${slug}` },
         },
     };
 }

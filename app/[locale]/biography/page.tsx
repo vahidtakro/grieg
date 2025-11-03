@@ -2,6 +2,7 @@ import { getMarkdownBySlug } from "@/lib/markdown";
 import type { Metadata } from "next";
 import { getLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
+import { siteConfig } from "@/src/config/site";
 
 export default async function BiographyPage({ params }: { params: Promise<{ locale: string }> }) {
 	const t = await getTranslations();
@@ -39,8 +40,8 @@ export async function generateMetadata(): Promise<Metadata> {
             images: [ogImage],
         },
         alternates: {
-            canonical: `/${locale}/biography`,
-            languages: { en: "/en/biography", fa: "/fa/biography", no: "/no/biography" },
+            canonical: `${siteConfig.baseUrl}/${locale}/biography`,
+            languages: { en: `${siteConfig.baseUrl}/en/biography`, fa: `${siteConfig.baseUrl}/fa/biography`, no: `${siteConfig.baseUrl}/no/biography` },
         },
     };
 }
